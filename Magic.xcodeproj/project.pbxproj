@@ -103,6 +103,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 467699E72277846E0095E73D /* Build configuration list for PBXNativeTarget "Magic" */;
 			buildPhases = (
+				467699ED2277916B0095E73D /* Swiftlint */,
 				467699C62277846E0095E73D /* Sources */,
 				467699C72277846E0095E73D /* Frameworks */,
 				467699C82277846E0095E73D /* Resources */,
@@ -191,6 +192,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		467699ED2277916B0095E73D /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint lint --path \"$SRCROOT/Magic\"\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		467699C62277846E0095E73D /* Sources */ = {
