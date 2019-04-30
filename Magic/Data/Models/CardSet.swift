@@ -1,5 +1,5 @@
 //
-//  Card.swift
+//  CardSet.swift
 //  MagicAPI
 //
 //  Created by filipe.n.jordao on 30/04/19.
@@ -8,6 +8,8 @@
 
 import Foundation
 
-public struct Card: Codable {
-    
+public struct CardSet: Codable {
+    public let code: String
+    public let name: String
+    public let releaseDate: String
 }

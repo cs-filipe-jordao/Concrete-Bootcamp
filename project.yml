@@ -13,6 +13,9 @@ targets:
     scheme:
       testTargets:
         - MagicTests
+    dependencies:
+      - carthage: Alamofire
+    gatherCoverageData: true
 
   MagicTests:
     type: bundle.unit-test
@@ -22,27 +25,3 @@ targets:
       - target: Magic
       - carthage: Quick
       - carthage: Nimble
-    gatherCoverageData: true
-
-  MagicAPI:
-    type: framework
-    platform: iOS
-    sources: [MagicAPI]
-    postCompileScripts:
-      - script: swiftlint lint --path "$SRCROOT/MagicAPI"
-        name: SwiftLint
-    scheme:
-      testTargets:
-        - MagicAPITests
-
-  MagicAPITests:
-    type: bundle.unit-test
-    platform: iOS
-    sources: [MagicAPITests]
-    dependencies:
-      - target: MagicAPI
-      - carthage: Quick
-      - carthage: Nimble
-    gatherCoverageData: true
-
-
