@@ -1,0 +1,48 @@
+name: Magic
+options:
+  bundleIdPrefix: com.jordao.filipe.magic
+targets:
+  Magic:
+    type: application
+    platform: iOS
+    deploymentTarget: "10.0"
+    sources: [Magic]
+    postCompileScripts:
+      - script: swiftlint lint --path "$SRCROOT/Magic"
+        name: SwiftLint
+    scheme:
+      testTargets:
+        - MagicTests
+
+  MagicTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [MagicTests]
+    dependencies:
+      - target: Magic
+      - carthage: Quick
+      - carthage: Nimble
+    gatherCoverageData: true
+
+  MagicAPI:
+    type: framework
+    platform: iOS
+    sources: [MagicAPI]
+    postCompileScripts:
+      - script: swiftlint lint --path "$SRCROOT/MagicAPI"
+        name: SwiftLint
+    scheme:
+      testTargets:
+        - MagicAPITests
+
+  MagicAPITests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [MagicAPITests]
+    dependencies:
+      - target: MagicAPI
+      - carthage: Quick
+      - carthage: Nimble
+    gatherCoverageData: true
+
+
