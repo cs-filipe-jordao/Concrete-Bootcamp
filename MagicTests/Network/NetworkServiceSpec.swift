@@ -43,8 +43,9 @@ class NetworkServiceSpec: QuickSpec {
             }
             context("When fetching the list of Cards of a CardSet") {
                 var cards: [Card]?
-                let cardSet = CardSet(code: "10E", name: "Tenth Edition", releaseDate: "2007-07-13")
-
+                let cardSet = CardSet(code: "10E",
+                                      name: "Tenth Edition",
+                                      releaseDate: "2007-07-13")
                 beforeEach {
                     self.stubSuccessCardsRequests(for: host, and: cardSet)
                     sut.fetchCards(from: cardSet, page: 0) {
