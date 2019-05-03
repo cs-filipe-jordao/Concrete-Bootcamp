@@ -13,9 +13,9 @@ targets:
     scheme:
       testTargets:
         - MagicTests
+      gatherCoverageData: true
     dependencies:
       - carthage: Alamofire
-    gatherCoverageData: true
 
   MagicTests:
     type: bundle.unit-test
@@ -25,3 +25,4 @@ targets:
       - target: Magic
       - carthage: Quick
       - carthage: Nimble
+      - carthage: OHHTTPStubs

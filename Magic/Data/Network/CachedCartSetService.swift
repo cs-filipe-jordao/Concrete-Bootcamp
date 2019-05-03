@@ -8,13 +8,13 @@
 import Foundation
 
 public class CachedCardSetService: CardSetService {
-    private let cacheKey = "CARDSETS"
-    private let cache: Cache<[CardSet]>
-    private let service: CardSetService
+    let cacheKey = "CARDSETS"
+    let cache: Cache<[CardSet]>
+    let service: CardSetService
 
-    public init(service: CardSetService) {
+    public init(service: CardSetService, cache: Cache<[CardSet]> = Cache()) {
         self.service = service
-        cache = Cache()
+        self.cache = cache
     }
 
     public func fetchSets(completion: @escaping SetsCompletion) {
@@ -29,7 +29,7 @@ public class CachedCardSetService: CardSetService {
                 self.cache.setObject(sets,
                                      for: self.cacheKey,
                                      timeout: 100000)
-
+                completion(result)
             }
         }
     }
