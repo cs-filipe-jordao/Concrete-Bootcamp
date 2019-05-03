@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Card: Codable {
+struct Card: Codable, Hashable {
     let name, type: String
     let types: [String]
     let cardSet: String
