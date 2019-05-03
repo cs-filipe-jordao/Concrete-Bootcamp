@@ -27,44 +27,34 @@ class NetworkServiceSpec: QuickSpec {
 
             context("When fetching the list of CardSets") {
                 var sets: [CardSet]?
-                var error: Error?
 
                 beforeEach {
                     self.stubSuccessSetsRequests(for: host)
                     sut.fetchSets {
-                        switch $0 {
-                        case let .success(s):
+                        if case let .success(s) = $0 {
                             sets = s
-                        case let .failure(err):
-                            error = err
                         }
                     }
                 }
 
                 it("Should complete with the expected ammount of sets") {
-                    expect(error).toEventually(beNil())
                     expect(sets?.count).toEventually(equal(446))
                 }
             }
             context("When fetching the list of Cards of a CardSet") {
                 var cards: [Card]?
-                var error: Error?
                 let cardSet = CardSet(code: "10E", name: "Tenth Edition", releaseDate: "2007-07-13")
 
                 beforeEach {
                     self.stubSuccessCardsRequests(for: host, and: cardSet)
                     sut.fetchCards(from: cardSet, page: 0) {
-                        switch $0 {
-                        case let .success(c):
+                        if case let .success(c) = $0 {
                             cards = c
-                        case let .failure(err):
-                            error = err
                         }
                     }
                 }
 
                 it("Should complete with the expected ammount of cards") {
-                    expect(error).toEventually(beNil())
                     expect(cards?.count).toEventually(equal(100))
                 }
             }
