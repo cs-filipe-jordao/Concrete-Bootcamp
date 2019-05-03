@@ -14,7 +14,7 @@ class TypeCardGrouperSpec: QuickSpec {
     override func spec() {
         describe("A TypeCardGrouper") {
             context("When grouping a list of cards") {
-                let sut = TypeCardGrouper()
+                let sut = TypeCardGroupingStrategy()
 
                 let card1 = Card(name: "Card1",
                                  type: "something",

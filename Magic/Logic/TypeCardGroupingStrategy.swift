@@ -17,7 +17,7 @@ class TypeCardGroupingStrategy: CardGroupingStrategy {
         return Grouped(keyValues, uniquingKeysWith: +)
     }
 
-    func groups(from card: Card) -> [GroupKey: [Card]] {
+    private func groups(from card: Card) -> [GroupKey: [Card]] {
         let keyValues = card.types.map { ($0, [card])}
 
         return Grouped(keyValues, uniquingKeysWith: +)
