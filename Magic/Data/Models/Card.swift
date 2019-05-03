@@ -10,22 +10,15 @@ import Foundation
 
 struct Card: Codable {
     let name, type: String
-    let supertypes: [String]
     let types: [String]
-    let subtypes: [String]
     let cardSet: String
-    let number: String
-    let multiverseid: Int
-    let imageURL: String
-    let printings: [String]
+    let imageURL: String?
     let identifier: String
 
     enum CodingKeys: String, CodingKey {
-        case name, type, supertypes, types, subtypes
+        case name, type, types
         case cardSet = "set"
-        case number, multiverseid
         case imageURL = "imageUrl"
-        case printings
         case identifier = "id"
     }
 }

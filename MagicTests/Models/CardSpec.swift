@@ -36,29 +36,14 @@ class CardSpec: QuickSpec {
                     let type = json["type"] as? String
                     expect(sut??.type).to(equal(type))
 
-                    let supertypes = json["supertypes"] as? [String]
-                    expect(sut??.supertypes).to(equal(supertypes))
-
                     let types = json["types"] as? [String]
                     expect(sut??.types).to(equal(types))
-
-                    let subtypes = json["subtypes"] as? [String]
-                    expect(sut??.subtypes).to(equal(subtypes))
 
                     let set = json["set"] as? String
                     expect(sut??.cardSet).to(equal(set))
 
-                    let number = json["number"] as? String
-                    expect(sut??.number).to(equal(number))
-
-                    let multiverseid = json["multiverseid"] as? Int
-                    expect(sut??.multiverseid).to(equal(multiverseid))
-
                     let imageUrl = json["imageUrl"] as? String
                     expect(sut??.imageURL).to(equal(imageUrl))
-
-                    let printings = json["printings"] as? [String]
-                    expect(sut??.printings).to(equal(printings))
 
                     let identifier = json["id"] as? String
                     expect(sut??.identifier).to(equal(identifier))
