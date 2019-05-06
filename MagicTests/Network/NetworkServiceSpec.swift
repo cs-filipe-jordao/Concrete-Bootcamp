@@ -48,7 +48,7 @@ class NetworkServiceSpec: QuickSpec {
                                       releaseDate: "2007-07-13")
                 beforeEach {
                     self.stubSuccessCardsRequests(for: host, and: cardSet)
-                    sut.fetchCards(from: cardSet, page: 0) {
+                    sut.fetchAllCards(from: cardSet) {
                         if case let .success(c) = $0 {
                             cards = c
                         }
@@ -56,7 +56,7 @@ class NetworkServiceSpec: QuickSpec {
                 }
 
                 it("Should complete with the expected ammount of cards") {
-                    expect(cards?.count).toEventually(equal(100))
+                    expect(cards?.count).toEventually(equal(200))
                 }
             }
         }
@@ -84,6 +84,26 @@ class NetworkServiceSpec: QuickSpec {
 
             return OHHTTPStubsResponse(
                 fileAtPath: path,
+                statusCode: 200,
+                headers: [ "Content-Type": "application/json" ]
+            )
+        }
+
+        stub(condition: isHost(host) && isPath("/v1/cards") && containsQueryParams(["page": "1", "set": cardSet.code])) { _ in
+            guard let path = OHPathForFile("Cards.json", type(of: self)) else {
+                preconditionFailure("Could not find expected file in test bundle")
+            }
+
+            return OHHTTPStubsResponse(
+                fileAtPath: path,
+                statusCode: 200,
+                headers: [ "Content-Type": "application/json" ]
+            )
+        }
+
+        stub(condition: isHost(host) && isPath("/v1/cards") && containsQueryParams(["page": "2", "set": cardSet.code])) { _ in
+          return OHHTTPStubsResponse(
+            jsonObject: ["cards": []],
                 statusCode: 200,
                 headers: [ "Content-Type": "application/json" ]
             )
