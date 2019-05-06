@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct MagicCardSet {
+    public let code: String
+    public let name: String
+    public let releaseDate: Date
+    public let cards: [MagicCard]
+}

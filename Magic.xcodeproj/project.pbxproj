@@ -17,6 +17,7 @@
 		2F102689DA7180DF8D5AAED54F7EE97B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A06F0D0EC0887CE3B6818813F3FFE48 /* Main.storyboard */; };
 		3C91FFD6B6749F57C4E569D77CE817DD /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857035761DBFFFBDA641D43A064931D8 /* Nimble.framework */; };
 		46CA3FD222807D49007CE3F1 /* MagicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CA3FD122807D49007CE3F1 /* MagicCard.swift */; };
+		46CA3FD422807D8C007CE3F1 /* MagicCardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CA3FD322807D8C007CE3F1 /* MagicCardSet.swift */; };
 		46D95022227CA5A20050ED0C /* Cards.json in Resources */ = {isa = PBXBuildFile; fileRef = 46D95021227CA5A20050ED0C /* Cards.json */; };
 		46D95025227CB7F80050ED0C /* CardGroupingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D95024227CB7F80050ED0C /* CardGroupingStrategy.swift */; };
 		46D95027227CB8600050ED0C /* TypeCardGroupingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D95026227CB8600050ED0C /* TypeCardGroupingStrategy.swift */; };
@@ -77,6 +78,7 @@
 		277990D0FA7A21130ABD56192D6A81BF /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = "<group>"; };
 		40B958FF277A36A4CD59B4BB578CB040 /* MagicTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MagicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46CA3FD122807D49007CE3F1 /* MagicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCard.swift; sourceTree = "<group>"; };
+		46CA3FD322807D8C007CE3F1 /* MagicCardSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardSet.swift; sourceTree = "<group>"; };
 		46D95021227CA5A20050ED0C /* Cards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Cards.json; sourceTree = "<group>"; };
 		46D95024227CB7F80050ED0C /* CardGroupingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGroupingStrategy.swift; sourceTree = "<group>"; };
 		46D95026227CB8600050ED0C /* TypeCardGroupingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCardGroupingStrategy.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				46CA3FD122807D49007CE3F1 /* MagicCard.swift */,
+				46CA3FD322807D8C007CE3F1 /* MagicCardSet.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				1F8A4557EC27742EF138A3C8468A5B92 /* Cache.swift in Sources */,
 				5E560279B30DF45CD0AE091523DA9C23 /* CachedCartSetService.swift in Sources */,
 				6125366354A5E05FEDBF3871B35D6765 /* Card.swift in Sources */,
+				46CA3FD422807D8C007CE3F1 /* MagicCardSet.swift in Sources */,
 				A038C00B0C5480B6AEF2530CBA149F3D /* CardService.swift in Sources */,
 				F3EB9DA72D006EDE7A3512440BF70E70 /* CardSet.swift in Sources */,
 				27153817BA1B6B8983A58AB8F3496FB0 /* CardSetService.swift in Sources */,
