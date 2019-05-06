@@ -7,7 +7,9 @@
 
 import Foundation
 
-class CardViewModel {
+class CardViewModel: CellViewModel {
+    let cellId = "MagicCardCell"
+
     let imageURL: URL?
 
     init(imageURL: URL?) {

@@ -17,6 +17,9 @@
 		2F102689DA7180DF8D5AAED54F7EE97B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A06F0D0EC0887CE3B6818813F3FFE48 /* Main.storyboard */; };
 		3C91FFD6B6749F57C4E569D77CE817DD /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857035761DBFFFBDA641D43A064931D8 /* Nimble.framework */; };
 		46C7E34822809C0C001330DA /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C7E34722809C0C001330DA /* CardViewModel.swift */; };
+		46C7E34A22809FF6001330DA /* TypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C7E34922809FF6001330DA /* TypeViewModel.swift */; };
+		46C7E34D2280A2E1001330DA /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C7E34C2280A2E1001330DA /* CellViewModel.swift */; };
+		46C7E34F2280A3B4001330DA /* CollectionViewSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C7E34E2280A3B4001330DA /* CollectionViewSectionViewModel.swift */; };
 		46CA3FD222807D49007CE3F1 /* MagicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CA3FD122807D49007CE3F1 /* MagicCard.swift */; };
 		46CA3FD422807D8C007CE3F1 /* MagicCardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CA3FD322807D8C007CE3F1 /* MagicCardSet.swift */; };
 		46D95022227CA5A20050ED0C /* Cards.json in Resources */ = {isa = PBXBuildFile; fileRef = 46D95021227CA5A20050ED0C /* Cards.json */; };
@@ -79,6 +82,9 @@
 		277990D0FA7A21130ABD56192D6A81BF /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = "<group>"; };
 		40B958FF277A36A4CD59B4BB578CB040 /* MagicTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MagicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46C7E34722809C0C001330DA /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		46C7E34922809FF6001330DA /* TypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeViewModel.swift; sourceTree = "<group>"; };
+		46C7E34C2280A2E1001330DA /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
+		46C7E34E2280A3B4001330DA /* CollectionViewSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSectionViewModel.swift; sourceTree = "<group>"; };
 		46CA3FD122807D49007CE3F1 /* MagicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCard.swift; sourceTree = "<group>"; };
 		46CA3FD322807D8C007CE3F1 /* MagicCardSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardSet.swift; sourceTree = "<group>"; };
 		46D95021227CA5A20050ED0C /* Cards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Cards.json; sourceTree = "<group>"; };
@@ -231,9 +237,28 @@
 		46C7E34622809BDC001330DA /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				46C7E34B2280A2CA001330DA /* Protocols */,
 				46C7E34722809C0C001330DA /* CardViewModel.swift */,
+				46C7E34922809FF6001330DA /* TypeViewModel.swift */,
+				46C7E34E2280A3B4001330DA /* CollectionViewSectionViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		46C7E34B2280A2CA001330DA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				46C7E34C2280A2E1001330DA /* CellViewModel.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		46C7E3502280A5AB001330DA /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				46D95024227CB7F80050ED0C /* CardGroupingStrategy.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		46CA3FD022807D3E007CE3F1 /* Models */ = {
@@ -249,7 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				46CA3FD022807D3E007CE3F1 /* Models */,
-				46D95024227CB7F80050ED0C /* CardGroupingStrategy.swift */,
+				46C7E3502280A5AB001330DA /* Protocols */,
 				46D95026227CB8600050ED0C /* TypeCardGroupingStrategy.swift */,
 			);
 			path = Logic;
@@ -452,9 +477,12 @@
 			files = (
 				BD90D09DFD411918A117AB707805CCE7 /* AppDelegate.swift in Sources */,
 				46CA3FD222807D49007CE3F1 /* MagicCard.swift in Sources */,
+				46C7E34A22809FF6001330DA /* TypeViewModel.swift in Sources */,
 				1F8A4557EC27742EF138A3C8468A5B92 /* Cache.swift in Sources */,
 				5E560279B30DF45CD0AE091523DA9C23 /* CachedCartSetService.swift in Sources */,
 				6125366354A5E05FEDBF3871B35D6765 /* Card.swift in Sources */,
+				46C7E34F2280A3B4001330DA /* CollectionViewSectionViewModel.swift in Sources */,
+				46C7E34D2280A2E1001330DA /* CellViewModel.swift in Sources */,
 				46CA3FD422807D8C007CE3F1 /* MagicCardSet.swift in Sources */,
 				46C7E34822809C0C001330DA /* CardViewModel.swift in Sources */,
 				A038C00B0C5480B6AEF2530CBA149F3D /* CardService.swift in Sources */,
