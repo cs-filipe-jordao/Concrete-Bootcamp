@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MagicCard {
+struct MagicCard: Hashable {
     public let name: String
     public let type: String
     public let types: [String]

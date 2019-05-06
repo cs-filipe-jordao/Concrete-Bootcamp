@@ -9,5 +9,5 @@ import Foundation
 
 protocol CardGroupingStrategy {
     associatedtype GroupKey: Hashable
-    func group(cards: [Card]) -> [GroupKey: [Card]]
+    func group(cards: [MagicCard]) -> [GroupKey: [MagicCard]]
 }
