@@ -50,8 +50,8 @@ extension NetworkService: CardService {
                             currentPage: Int,
                             currentCards: [Card],
                             completion: @escaping CardsCompletion) {
-        fetchCards(from: set, page: currentPage) { [weak self] res in
-            switch res {
+        fetchCards(from: set, page: currentPage) { [weak self] result in
+            switch result {
             case let .success(cards):
                 if cards.isEmpty {
                     completion(.success(currentCards))
@@ -62,7 +62,7 @@ extension NetworkService: CardService {
                                  currentCards: currentCards + cards,
                                  completion: completion)
             case .failure:
-                completion(res)
+                completion(result)
             }
         }
     }
