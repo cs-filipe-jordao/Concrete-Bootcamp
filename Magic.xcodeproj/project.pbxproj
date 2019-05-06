@@ -147,7 +147,6 @@
 		22E1B3D434FFDA3C4AD291FB79F7DDAB /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				46D95028227CC38F0050ED0C /* Logic */,
 				61A4087D4770CD28304482FD2B0FCBDC /* CachedCardSetServiceSpec.swift */,
 				9FA69728A103B914706A76F67AD008CA /* CacheSpec.swift */,
 				83E9CE4ED600106DC6EBFD8920D93ACF /* NetworkServiceSpec.swift */,
@@ -209,6 +208,23 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		46C7E34122809AB7001330DA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				22E1B3D434FFDA3C4AD291FB79F7DDAB /* Network */,
+				1F7411055E1BE00A792225AD25E687DE /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		46C7E34222809AC6001330DA /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				46D95029227CC39C0050ED0C /* TypeCardGrouperSpec.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
 		46CA3FD022807D3E007CE3F1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,14 +240,6 @@
 				46CA3FD022807D3E007CE3F1 /* Models */,
 				46D95024227CB7F80050ED0C /* CardGroupingStrategy.swift */,
 				46D95026227CB8600050ED0C /* TypeCardGroupingStrategy.swift */,
-			);
-			path = Logic;
-			sourceTree = "<group>";
-		};
-		46D95028227CC38F0050ED0C /* Logic */ = {
-			isa = PBXGroup;
-			children = (
-				46D95029227CC39C0050ED0C /* TypeCardGrouperSpec.swift */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -268,10 +276,10 @@
 		844C7DF45E3D3E1B36EC126306D9FAAD /* MagicTests */ = {
 			isa = PBXGroup;
 			children = (
+				46C7E34222809AC6001330DA /* Logic */,
+				46C7E34122809AB7001330DA /* Data */,
 				891EABD397E79AD48E213F258177E2D4 /* Info.plist */,
 				95EFFA5B8C0455FCE4FD1CC9C90B6773 /* TimeTravelling.swift */,
-				1F7411055E1BE00A792225AD25E687DE /* Models */,
-				22E1B3D434FFDA3C4AD291FB79F7DDAB /* Network */,
 			);
 			path = MagicTests;
 			sourceTree = "<group>";
