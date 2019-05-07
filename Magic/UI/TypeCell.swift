@@ -1,0 +1,42 @@
+//
+//  TypeCell.swift
+//  Magic
+//
+//  Created by filipe.n.jordao on 07/05/19.
+//
+
+import UIKit
+
+final class TypeCell: UICollectionViewCell {
+    let typeLabel = UILabel()
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configureView()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension TypeCell: CodeView {
+    func setupViews() {
+        typeLabel.textAlignment = .left
+        typeLabel.textColor = #colorLiteral(red: 0.8318908215, green: 0.8277270198, blue: 0.8056753278, alpha: 1)
+        typeLabel.font = UIFont.boldSystemFont(ofSize: 14)
+    }
+
+    func setupHierarchy() {
+        contentView.addSubview(typeLabel)
+    }
+
+    func setupConstraints() {
+        typeLabel.snp.makeConstraints { make in
+            make.left
+                .right
+                .centerY
+                .equalTo(contentView)
+        }
+    }
+}
