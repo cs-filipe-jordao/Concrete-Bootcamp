@@ -17,7 +17,7 @@ class CardSetListViewSpec: QuickSpec {
             context("When its created") {
                 let sut = CardSetListView(frame: CGRect(x: 0, y: 0, width: 400, height: 800))
                 it("Should render as expected") {
-                    expect(sut) == recordSnapshot("CardSetListView")
+                    expect(sut) == snapshot("CardSetListView")
                 }
             }
         }
