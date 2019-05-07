@@ -8,7 +8,14 @@
 import UIKit
 
 final class TypeCell: UICollectionViewCell {
-    let typeLabel = UILabel()
+    let typeLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .left
+        label.textColor = #colorLiteral(red: 0.8318908215, green: 0.8277270198, blue: 0.8056753278, alpha: 1)
+        label.font = UIFont.boldSystemFont(ofSize: 14)
+
+        return label
+    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,12 +28,6 @@ final class TypeCell: UICollectionViewCell {
 }
 
 extension TypeCell: CodeView {
-    func setupViews() {
-        typeLabel.textAlignment = .left
-        typeLabel.textColor = #colorLiteral(red: 0.8318908215, green: 0.8277270198, blue: 0.8056753278, alpha: 1)
-        typeLabel.font = UIFont.boldSystemFont(ofSize: 14)
-    }
-
     func setupHierarchy() {
         contentView.addSubview(typeLabel)
     }
