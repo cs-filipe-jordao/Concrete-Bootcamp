@@ -21,6 +21,8 @@
 		42C778A83DBDF5342870AAEF4DDB0CC9 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E614F5A78547AD1CDC33C1D6C81165C0 /* CardViewModel.swift */; };
 		4472CEAF982E9FFACFF223B010DCDFE5 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9847218662A479E6F10274E7B5A4CD3C /* CellViewModel.swift */; };
 		460C930F2281BEA5004F9C0E /* CardCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460C930E2281BEA5004F9C0E /* CardCellSpec.swift */; };
+		460C93132281C56B004F9C0E /* TypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460C93122281C56B004F9C0E /* TypeCell.swift */; };
+		460C93152281C9FB004F9C0E /* TypeCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460C93142281C9FB004F9C0E /* TypeCellSpec.swift */; };
 		4AA5345AFA0057B2CBC3EA963E8EE464 /* CardSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFF635EFCF8CAA6E3563FAD95F7C118 /* CardSetSpec.swift */; };
 		500CE221440CE141C684314BF18DB6FD /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 857035761DBFFFBDA641D43A064931D8 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5810AD324D7AC47B65E1F53CD1B80D9A /* Nimble_Snapshots.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19316034B3F732DA9CE805F400FF3CB3 /* Nimble_Snapshots.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -96,6 +98,8 @@
 		38F7D2FAF746317759936F044552E7F9 /* CachedCardSetServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedCardSetServiceSpec.swift; sourceTree = "<group>"; };
 		40B958FF277A36A4CD59B4BB578CB040 /* MagicTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MagicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		460C930E2281BEA5004F9C0E /* CardCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellSpec.swift; sourceTree = "<group>"; };
+		460C93122281C56B004F9C0E /* TypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCell.swift; sourceTree = "<group>"; };
+		460C93142281C9FB004F9C0E /* TypeCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCellSpec.swift; sourceTree = "<group>"; };
 		4BDEC458A7EA3281355658B4BCC0DEDE /* CardSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSet.swift; sourceTree = "<group>"; };
 		4CFEC9FAD0C4B2CAA7ABE1858CC17439 /* CollectionViewSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSectionViewModel.swift; sourceTree = "<group>"; };
 		643B2E771BBB60AE3A53BE0C734A6931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -260,6 +264,7 @@
 			children = (
 				FC3EB2E99657D43B067607B37781336C /* CardCell.swift */,
 				65A57DA1F065B53792E91D363C90E6E3 /* CodeView.swift */,
+				460C93122281C56B004F9C0E /* TypeCell.swift */,
 			);
 			name = UI;
 			path = ../UI;
@@ -279,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				460C930E2281BEA5004F9C0E /* CardCellSpec.swift */,
+				460C93142281C9FB004F9C0E /* TypeCellSpec.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -551,6 +557,7 @@
 				27153817BA1B6B8983A58AB8F3496FB0 /* CardSetService.swift in Sources */,
 				42C778A83DBDF5342870AAEF4DDB0CC9 /* CardViewModel.swift in Sources */,
 				4472CEAF982E9FFACFF223B010DCDFE5 /* CellViewModel.swift in Sources */,
+				460C93132281C56B004F9C0E /* TypeCell.swift in Sources */,
 				B40DE9CC6FD8453A9C4EEDF7752E2A32 /* CodeView.swift in Sources */,
 				B3AA89BECC70018C0A48902461C0405B /* CollectionViewSectionViewModel.swift in Sources */,
 				F0776FE1B3C8C250409AEC15364DE989 /* MagicCard.swift in Sources */,
@@ -571,6 +578,7 @@
 				460C930F2281BEA5004F9C0E /* CardCellSpec.swift in Sources */,
 				4AA5345AFA0057B2CBC3EA963E8EE464 /* CardSetSpec.swift in Sources */,
 				5BAB38370C9F667E24BA4A2B4F683577 /* CardSpec.swift in Sources */,
+				460C93152281C9FB004F9C0E /* TypeCellSpec.swift in Sources */,
 				01517ADFE6151212508331BE614868E9 /* NetworkServiceSpec.swift in Sources */,
 				EB666E84B56A8B48A7E495AA9FC4099D /* TimeTravelling.swift in Sources */,
 				048F5702FC8D0C741DE5609F40525A08 /* TypeCardGrouperSpec.swift in Sources */,

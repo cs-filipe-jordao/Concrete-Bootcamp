@@ -19,4 +19,6 @@ extension CodeView {
         setupHierarchy()
         setupConstraints()
     }
+
+    func setupViews() {}
 }
