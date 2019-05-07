@@ -209,7 +209,8 @@
 				437140D7401BFEEF01EFDA82DE57C596 /* Network */,
 				3866AA3BC08A659BA78B045B7F233055 /* Protocols */,
 			);
-			path = Data;
+			name = Data;
+			path = ../Data;
 			sourceTree = "<group>";
 		};
 		2F4C5F5A7792EA357BAB3171CA17A8CD /* Protocols */ = {
@@ -227,7 +228,8 @@
 				62B8C56BB66383A28F30B71353576A11 /* Models */,
 				8DF8B826F972AC8F845CD0F93E1829BF /* Protocols */,
 			);
-			path = Logic;
+			name = Logic;
+			path = ../Logic;
 			sourceTree = "<group>";
 		};
 		3866AA3BC08A659BA78B045B7F233055 /* Protocols */ = {
@@ -248,10 +250,7 @@
 				2FED5A7B6C2CF86827FFA4F2F70EC521 /* LaunchScreen.storyboard */,
 				8A06F0D0EC0887CE3B6818813F3FFE48 /* Main.storyboard */,
 				B1A4808FC8D210F574BDA31EE378EF36 /* ViewController.swift */,
-				2B6ADFF20FD3F630A076CFA23E45E74B /* Data */,
-				33859F0D1BFF222B0FCF1C0DE3527E90 /* Logic */,
-				3D80AF2B9857EC2DBEFDF945A35D68CB /* UI */,
-				CE05CFB511E1137EE4F1DE752DB674C4 /* ViewModels */,
+				46E0EBF42281F1DB0016EB1C /* Common */,
 			);
 			path = Magic;
 			sourceTree = "<group>";
@@ -262,7 +261,8 @@
 				FC3EB2E99657D43B067607B37781336C /* CardCell.swift */,
 				65A57DA1F065B53792E91D363C90E6E3 /* CodeView.swift */,
 			);
-			path = UI;
+			name = UI;
+			path = ../UI;
 			sourceTree = "<group>";
 		};
 		437140D7401BFEEF01EFDA82DE57C596 /* Network */ = {
@@ -281,6 +281,27 @@
 				460C930E2281BEA5004F9C0E /* CardCellSpec.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		4628DD0F2281F28000F82807 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				460C930D2281BE97004F9C0E /* UI */,
+				1EDE6C8472F53D40B94F0F975B67D126 /* Data */,
+				98EE4E8280DCB872D689BD82A9540C21 /* Logic */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		46E0EBF42281F1DB0016EB1C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2B6ADFF20FD3F630A076CFA23E45E74B /* Data */,
+				33859F0D1BFF222B0FCF1C0DE3527E90 /* Logic */,
+				3D80AF2B9857EC2DBEFDF945A35D68CB /* UI */,
+				CE05CFB511E1137EE4F1DE752DB674C4 /* ViewModels */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		62B8C56BB66383A28F30B71353576A11 /* Models */ = {
@@ -336,11 +357,9 @@
 		844C7DF45E3D3E1B36EC126306D9FAAD /* MagicTests */ = {
 			isa = PBXGroup;
 			children = (
-				460C930D2281BE97004F9C0E /* UI */,
+				4628DD0F2281F28000F82807 /* Common */,
 				891EABD397E79AD48E213F258177E2D4 /* Info.plist */,
 				95EFFA5B8C0455FCE4FD1CC9C90B6773 /* TimeTravelling.swift */,
-				1EDE6C8472F53D40B94F0F975B67D126 /* Data */,
-				98EE4E8280DCB872D689BD82A9540C21 /* Logic */,
 			);
 			path = MagicTests;
 			sourceTree = "<group>";
@@ -379,7 +398,8 @@
 				79EAB862CCA49F264E3C8563AABDFC58 /* TypeViewModel.swift */,
 				2F4C5F5A7792EA357BAB3171CA17A8CD /* Protocols */,
 			);
-			path = ViewModels;
+			name = ViewModels;
+			path = ../ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
