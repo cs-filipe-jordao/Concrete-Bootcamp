@@ -33,7 +33,7 @@
 		A965B8AD738C8CB467153E200E861D98 /* Sets.json in Resources */ = {isa = PBXBuildFile; fileRef = B6E73C6FC8207EBD16300F9D038DC49B /* Sets.json */; };
 		AA3C8C19214C01560E530463A6737423 /* Nimble_Snapshots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19316034B3F732DA9CE805F400FF3CB3 /* Nimble_Snapshots.framework */; };
 		AC2581A5EFAC75F86F1C685005D3E3BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C02D08FDA0F98A07595ECCB9625D13A /* Assets.xcassets */; };
-		AE73339FAFABAEC324E2FFDDE25943F6 /* TypeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAB862CCA49F264E3C8563AABDFC58 /* TypeViewModel.swift */; };
+		AE73339FAFABAEC324E2FFDDE25943F6 /* TextCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79EAB862CCA49F264E3C8563AABDFC58 /* TextCellViewModel.swift */; };
 		B075790AB56487A300937FA3BC4E1534 /* TypeCardGroupingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B85A94B324B5E2FAA5772B773DAADE /* TypeCardGroupingStrategy.swift */; };
 		B3AA89BECC70018C0A48902461C0405B /* CollectionViewSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFEC9FAD0C4B2CAA7ABE1858CC17439 /* CollectionViewSectionViewModel.swift */; };
 		B40DE9CC6FD8453A9C4EEDF7752E2A32 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65A57DA1F065B53792E91D363C90E6E3 /* CodeView.swift */; };
@@ -105,7 +105,7 @@
 		6C02D08FDA0F98A07595ECCB9625D13A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		700FDD75404DD88EA8F7DBF8BFFD43BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71B85A94B324B5E2FAA5772B773DAADE /* TypeCardGroupingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCardGroupingStrategy.swift; sourceTree = "<group>"; };
-		79EAB862CCA49F264E3C8563AABDFC58 /* TypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeViewModel.swift; sourceTree = "<group>"; };
+		79EAB862CCA49F264E3C8563AABDFC58 /* TextCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCellViewModel.swift; sourceTree = "<group>"; };
 		857035761DBFFFBDA641D43A064931D8 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = "<group>"; };
 		891EABD397E79AD48E213F258177E2D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95EFFA5B8C0455FCE4FD1CC9C90B6773 /* TimeTravelling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTravelling.swift; sourceTree = "<group>"; };
@@ -395,7 +395,7 @@
 			children = (
 				E614F5A78547AD1CDC33C1D6C81165C0 /* CardViewModel.swift */,
 				4CFEC9FAD0C4B2CAA7ABE1858CC17439 /* CollectionViewSectionViewModel.swift */,
-				79EAB862CCA49F264E3C8563AABDFC58 /* TypeViewModel.swift */,
+				79EAB862CCA49F264E3C8563AABDFC58 /* TextCellViewModel.swift */,
 				2F4C5F5A7792EA357BAB3171CA17A8CD /* Protocols */,
 			);
 			name = ViewModels;
@@ -557,7 +557,7 @@
 				D3131C223A010971438D99EDD11FFD28 /* MagicCardSet.swift in Sources */,
 				2CC6B30FD9AB056B41BEF6BB8192CCFB /* NetworkService.swift in Sources */,
 				B075790AB56487A300937FA3BC4E1534 /* TypeCardGroupingStrategy.swift in Sources */,
-				AE73339FAFABAEC324E2FFDDE25943F6 /* TypeViewModel.swift in Sources */,
+				AE73339FAFABAEC324E2FFDDE25943F6 /* TextCellViewModel.swift in Sources */,
 				BB9BE06232825B3C9F548E9AF3628505 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
