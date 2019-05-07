@@ -11,8 +11,11 @@
 		02360B1AACB45903D91858FF405D52BE /* FBSnapshotTestCase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F00E55EDE33EE690052377AFEB589359 /* FBSnapshotTestCase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		048F5702FC8D0C741DE5609F40525A08 /* TypeCardGrouperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BE3C3B7BA34AAC99AEDB03A7A5FF6D /* TypeCardGrouperSpec.swift */; };
 		076D418D6F43E1CB7A765ACD14146012 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669158D07267EDADD16AB6082704F236 /* Alamofire.framework */; };
+		0D58B0D59D1677B6149E62F6768526B1 /* TypeCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DC8E9652B188579A2DAE67C788A2E /* TypeCellSpec.swift */; };
 		0EC9BDEB1E99FCA58AD3E4D3549ABF76 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B52CD78997CF0FC7F1EAB8BA1DD2C7D /* SnapKit.framework */; };
+		1454B4FFC4CB599F25C668131AAB4B90 /* TypeCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86659F76EACD31294E3B9F56D125421D /* TypeCell@2x.png */; };
 		1F8A4557EC27742EF138A3C8468A5B92 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4673478BB09ACADBD8DE1153773B442 /* Cache.swift */; };
+		242BBBD0C02863555632E43368600B02 /* CardCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F959E3BC9D3E60DB7601E2405F64050 /* CardCellSpec.swift */; };
 		24C06CAA4CF546227B611F58A854FF59 /* CardGroupingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F22A240C4903FC9F5D4DE4274ECB3D /* CardGroupingStrategy.swift */; };
 		27153817BA1B6B8983A58AB8F3496FB0 /* CardSetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6D187FB85478F4CE7332CABA8FE8D1 /* CardSetService.swift */; };
 		2CC6B30FD9AB056B41BEF6BB8192CCFB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A577B6BFE78880803B225021F8812B0 /* NetworkService.swift */; };
@@ -20,13 +23,12 @@
 		3C91FFD6B6749F57C4E569D77CE817DD /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857035761DBFFFBDA641D43A064931D8 /* Nimble.framework */; };
 		42C778A83DBDF5342870AAEF4DDB0CC9 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E614F5A78547AD1CDC33C1D6C81165C0 /* CardViewModel.swift */; };
 		4472CEAF982E9FFACFF223B010DCDFE5 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9847218662A479E6F10274E7B5A4CD3C /* CellViewModel.swift */; };
-		460C930F2281BEA5004F9C0E /* CardCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460C930E2281BEA5004F9C0E /* CardCellSpec.swift */; };
-		460C93132281C56B004F9C0E /* TypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460C93122281C56B004F9C0E /* TypeCell.swift */; };
-		460C93152281C9FB004F9C0E /* TypeCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460C93142281C9FB004F9C0E /* TypeCellSpec.swift */; };
+		46E0EBF32281E4A20016EB1C /* CardSetListViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E0EBF22281E4A20016EB1C /* CardSetListViewSpec.swift */; };
 		4AA5345AFA0057B2CBC3EA963E8EE464 /* CardSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFF635EFCF8CAA6E3563FAD95F7C118 /* CardSetSpec.swift */; };
 		500CE221440CE141C684314BF18DB6FD /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 857035761DBFFFBDA641D43A064931D8 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5810AD324D7AC47B65E1F53CD1B80D9A /* Nimble_Snapshots.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19316034B3F732DA9CE805F400FF3CB3 /* Nimble_Snapshots.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5BAB38370C9F667E24BA4A2B4F683577 /* CardSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200AFD023987FD013CF57E3A7CBD5859 /* CardSpec.swift */; };
+		5CDE4569A7A38D0EE0A9903A6CFD091F /* TypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9892AEEDBAA5E3AF4452330C4CCF20 /* TypeCell.swift */; };
 		5E560279B30DF45CD0AE091523DA9C23 /* CachedCartSetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3BB73FCE835C2675D40389632398B8 /* CachedCartSetService.swift */; };
 		6125366354A5E05FEDBF3871B35D6765 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA1FCD1637752655EF21237375D7CB5 /* Card.swift */; };
 		87C59E1EF0C9FDBED613D4487553CA13 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F00E55EDE33EE690052377AFEB589359 /* FBSnapshotTestCase.framework */; };
@@ -46,12 +48,14 @@
 		D3131C223A010971438D99EDD11FFD28 /* MagicCardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DBE415536BB5F7C2B7D63BED050705 /* MagicCardSet.swift */; };
 		DA7ED1ABD0BDBE3701EA7591649EC31D /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B52CD78997CF0FC7F1EAB8BA1DD2C7D /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DCF5D64F8985FD7F7D1A046209680D79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FED5A7B6C2CF86827FFA4F2F70EC521 /* LaunchScreen.storyboard */; };
+		DE0BC3BFACCF881355BD4CACAC0E251D /* CardSetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACCAD1162306043D52A984600D4641B /* CardSetListView.swift */; };
 		E2FE5182013DECB0CC8271E53A9592F6 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3EB2E99657D43B067607B37781336C /* CardCell.swift */; };
 		E5EEF12EEF23ADED806918FAEB3C954A /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 669158D07267EDADD16AB6082704F236 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E86EE38F2E7E5D732086F37FBA743F48 /* OHHTTPStubs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9AA413F01270431EB0B50CB84CABF58 /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EA4B14E23B0A1B202645CA23A245F32C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277990D0FA7A21130ABD56192D6A81BF /* Quick.framework */; };
 		EB666E84B56A8B48A7E495AA9FC4099D /* TimeTravelling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EFFA5B8C0455FCE4FD1CC9C90B6773 /* TimeTravelling.swift */; };
 		F0776FE1B3C8C250409AEC15364DE989 /* MagicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CEF43FCD065D828EEEAD651DE4732F /* MagicCard.swift */; };
+		F1685FE4D2AB8B20215B2452BC0D0452 /* CardCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 330D73D5E187875EED20FFC64F42BD8E /* CardCell@2x.png */; };
 		F3EB9DA72D006EDE7A3512440BF70E70 /* CardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDEC458A7EA3281355658B4BCC0DEDE /* CardSet.swift */; };
 		F6460C18358A3675054C9C9ADBF4F29B /* Cards.json in Resources */ = {isa = PBXBuildFile; fileRef = A9C633EBE304CFDD8B3702A49165D199 /* Cards.json */; };
 		FA1C5F99C66728EEF83308A2D0F6579A /* CachedCardSetServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7D2FAF746317759936F044552E7F9 /* CachedCardSetServiceSpec.swift */; };
@@ -95,11 +99,10 @@
 		1E767FFBA8566ABB1DB5511368377DBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		200AFD023987FD013CF57E3A7CBD5859 /* CardSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSpec.swift; sourceTree = "<group>"; };
 		277990D0FA7A21130ABD56192D6A81BF /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = "<group>"; };
+		330D73D5E187875EED20FFC64F42BD8E /* CardCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CardCell@2x.png"; sourceTree = "<group>"; };
 		38F7D2FAF746317759936F044552E7F9 /* CachedCardSetServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedCardSetServiceSpec.swift; sourceTree = "<group>"; };
 		40B958FF277A36A4CD59B4BB578CB040 /* MagicTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MagicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		460C930E2281BEA5004F9C0E /* CardCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellSpec.swift; sourceTree = "<group>"; };
-		460C93122281C56B004F9C0E /* TypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCell.swift; sourceTree = "<group>"; };
-		460C93142281C9FB004F9C0E /* TypeCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCellSpec.swift; sourceTree = "<group>"; };
+		46E0EBF22281E4A20016EB1C /* CardSetListViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSetListViewSpec.swift; sourceTree = "<group>"; };
 		4BDEC458A7EA3281355658B4BCC0DEDE /* CardSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSet.swift; sourceTree = "<group>"; };
 		4CFEC9FAD0C4B2CAA7ABE1858CC17439 /* CollectionViewSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSectionViewModel.swift; sourceTree = "<group>"; };
 		643B2E771BBB60AE3A53BE0C734A6931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,13 +113,17 @@
 		700FDD75404DD88EA8F7DBF8BFFD43BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71B85A94B324B5E2FAA5772B773DAADE /* TypeCardGroupingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCardGroupingStrategy.swift; sourceTree = "<group>"; };
 		79EAB862CCA49F264E3C8563AABDFC58 /* TypeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeViewModel.swift; sourceTree = "<group>"; };
+		7D9892AEEDBAA5E3AF4452330C4CCF20 /* TypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCell.swift; sourceTree = "<group>"; };
+		840DC8E9652B188579A2DAE67C788A2E /* TypeCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCellSpec.swift; sourceTree = "<group>"; };
 		857035761DBFFFBDA641D43A064931D8 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = "<group>"; };
+		86659F76EACD31294E3B9F56D125421D /* TypeCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TypeCell@2x.png"; sourceTree = "<group>"; };
 		891EABD397E79AD48E213F258177E2D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95EFFA5B8C0455FCE4FD1CC9C90B6773 /* TimeTravelling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTravelling.swift; sourceTree = "<group>"; };
 		96863FD9CDB6FC2423B8518E14A9AB08 /* CacheSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheSpec.swift; sourceTree = "<group>"; };
 		96F22A240C4903FC9F5D4DE4274ECB3D /* CardGroupingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGroupingStrategy.swift; sourceTree = "<group>"; };
 		9847218662A479E6F10274E7B5A4CD3C /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		9B52CD78997CF0FC7F1EAB8BA1DD2C7D /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
+		9F959E3BC9D3E60DB7601E2405F64050 /* CardCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellSpec.swift; sourceTree = "<group>"; };
 		A9C633EBE304CFDD8B3702A49165D199 /* Cards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Cards.json; sourceTree = "<group>"; };
 		AC6D187FB85478F4CE7332CABA8FE8D1 /* CardSetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSetService.swift; sourceTree = "<group>"; };
 		B1A4808FC8D210F574BDA31EE378EF36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +135,7 @@
 		C4CEF43FCD065D828EEEAD651DE4732F /* MagicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCard.swift; sourceTree = "<group>"; };
 		C82CAB4533F5AA6B5C56E2144938E19C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB4D3DC5544ECDB6E54FE6F601C5B683 /* CardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardService.swift; sourceTree = "<group>"; };
+		DACCAD1162306043D52A984600D4641B /* CardSetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSetListView.swift; sourceTree = "<group>"; };
 		E614F5A78547AD1CDC33C1D6C81165C0 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		EEFF635EFCF8CAA6E3563FAD95F7C118 /* CardSetSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSetSpec.swift; sourceTree = "<group>"; };
 		F00E55EDE33EE690052377AFEB589359 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSnapshotTestCase.framework; sourceTree = "<group>"; };
@@ -252,6 +260,7 @@
 				2FED5A7B6C2CF86827FFA4F2F70EC521 /* LaunchScreen.storyboard */,
 				8A06F0D0EC0887CE3B6818813F3FFE48 /* Main.storyboard */,
 				B1A4808FC8D210F574BDA31EE378EF36 /* ViewController.swift */,
+				D31FDFEE16FE549A73B807FC67B4C00C /* CardSetList */,
 				2B6ADFF20FD3F630A076CFA23E45E74B /* Data */,
 				33859F0D1BFF222B0FCF1C0DE3527E90 /* Logic */,
 				3D80AF2B9857EC2DBEFDF945A35D68CB /* UI */,
@@ -265,7 +274,7 @@
 			children = (
 				FC3EB2E99657D43B067607B37781336C /* CardCell.swift */,
 				65A57DA1F065B53792E91D363C90E6E3 /* CodeView.swift */,
-				460C93122281C56B004F9C0E /* TypeCell.swift */,
+				7D9892AEEDBAA5E3AF4452330C4CCF20 /* TypeCell.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -280,11 +289,26 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		460C930D2281BE97004F9C0E /* UI */ = {
+		46E0EBEF2281E4800016EB1C /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				460C930E2281BEA5004F9C0E /* CardCellSpec.swift */,
-				460C93142281C9FB004F9C0E /* TypeCellSpec.swift */,
+				DACCAD1162306043D52A984600D4641B /* CardSetListView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		46E0EBF02281E48D0016EB1C /* CardSetList */ = {
+			isa = PBXGroup;
+			children = (
+				46E0EBF12281E4950016EB1C /* UI */,
+			);
+			path = CardSetList;
+			sourceTree = "<group>";
+		};
+		46E0EBF12281E4950016EB1C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				46E0EBF22281E4A20016EB1C /* CardSetListViewSpec.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -296,6 +320,15 @@
 				C1DBE415536BB5F7C2B7D63BED050705 /* MagicCardSet.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		67E7C2F95FDF8ECFFA51169CC9F38AD4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9F959E3BC9D3E60DB7601E2405F64050 /* CardCellSpec.swift */,
+				840DC8E9652B188579A2DAE67C788A2E /* TypeCellSpec.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		685A14AC7ECAC44DA40E67707C2D8838 /* JSON */ = {
@@ -330,6 +363,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		774A016C090C0BEE4633384AC493075C /* CardCellSpec */ = {
+			isa = PBXGroup;
+			children = (
+				330D73D5E187875EED20FFC64F42BD8E /* CardCell@2x.png */,
+			);
+			path = CardCellSpec;
+			sourceTree = "<group>";
+		};
 		821CC14E021E094CBDCD088DABD95963 /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,13 +383,23 @@
 		844C7DF45E3D3E1B36EC126306D9FAAD /* MagicTests */ = {
 			isa = PBXGroup;
 			children = (
-				460C930D2281BE97004F9C0E /* UI */,
+				46E0EBF02281E48D0016EB1C /* CardSetList */,
 				891EABD397E79AD48E213F258177E2D4 /* Info.plist */,
 				95EFFA5B8C0455FCE4FD1CC9C90B6773 /* TimeTravelling.swift */,
 				1EDE6C8472F53D40B94F0F975B67D126 /* Data */,
 				98EE4E8280DCB872D689BD82A9540C21 /* Logic */,
+				9E2891B82A1B91B432F1495F37578DA9 /* ReferenceImages */,
+				67E7C2F95FDF8ECFFA51169CC9F38AD4 /* UI */,
 			);
 			path = MagicTests;
+			sourceTree = "<group>";
+		};
+		8C4C192A70E365B90ECE2E54AAE6FECF /* TypeCellSpec */ = {
+			isa = PBXGroup;
+			children = (
+				86659F76EACD31294E3B9F56D125421D /* TypeCell@2x.png */,
+			);
+			path = TypeCellSpec;
 			sourceTree = "<group>";
 		};
 		8DF8B826F972AC8F845CD0F93E1829BF /* Protocols */ = {
@@ -365,6 +416,15 @@
 				C1BE3C3B7BA34AAC99AEDB03A7A5FF6D /* TypeCardGrouperSpec.swift */,
 			);
 			path = Logic;
+			sourceTree = "<group>";
+		};
+		9E2891B82A1B91B432F1495F37578DA9 /* ReferenceImages */ = {
+			isa = PBXGroup;
+			children = (
+				774A016C090C0BEE4633384AC493075C /* CardCellSpec */,
+				8C4C192A70E365B90ECE2E54AAE6FECF /* TypeCellSpec */,
+			);
+			path = ReferenceImages;
 			sourceTree = "<group>";
 		};
 		BBA3A022BB3D71DC3E6467AB6FDAF887 = {
@@ -386,6 +446,14 @@
 				2F4C5F5A7792EA357BAB3171CA17A8CD /* Protocols */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D31FDFEE16FE549A73B807FC67B4C00C /* CardSetList */ = {
+			isa = PBXGroup;
+			children = (
+				46E0EBEF2281E4800016EB1C /* UI */,
+			);
+			path = CardSetList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -465,8 +533,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1685FE4D2AB8B20215B2452BC0D0452 /* CardCell@2x.png in Resources */,
 				F6460C18358A3675054C9C9ADBF4F29B /* Cards.json in Resources */,
 				A965B8AD738C8CB467153E200E861D98 /* Sets.json in Resources */,
+				1454B4FFC4CB599F25C668131AAB4B90 /* TypeCell@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,16 +604,17 @@
 				24C06CAA4CF546227B611F58A854FF59 /* CardGroupingStrategy.swift in Sources */,
 				A038C00B0C5480B6AEF2530CBA149F3D /* CardService.swift in Sources */,
 				F3EB9DA72D006EDE7A3512440BF70E70 /* CardSet.swift in Sources */,
+				DE0BC3BFACCF881355BD4CACAC0E251D /* CardSetListView.swift in Sources */,
 				27153817BA1B6B8983A58AB8F3496FB0 /* CardSetService.swift in Sources */,
 				42C778A83DBDF5342870AAEF4DDB0CC9 /* CardViewModel.swift in Sources */,
 				4472CEAF982E9FFACFF223B010DCDFE5 /* CellViewModel.swift in Sources */,
-				460C93132281C56B004F9C0E /* TypeCell.swift in Sources */,
 				B40DE9CC6FD8453A9C4EEDF7752E2A32 /* CodeView.swift in Sources */,
 				B3AA89BECC70018C0A48902461C0405B /* CollectionViewSectionViewModel.swift in Sources */,
 				F0776FE1B3C8C250409AEC15364DE989 /* MagicCard.swift in Sources */,
 				D3131C223A010971438D99EDD11FFD28 /* MagicCardSet.swift in Sources */,
 				2CC6B30FD9AB056B41BEF6BB8192CCFB /* NetworkService.swift in Sources */,
 				B075790AB56487A300937FA3BC4E1534 /* TypeCardGroupingStrategy.swift in Sources */,
+				5CDE4569A7A38D0EE0A9903A6CFD091F /* TypeCell.swift in Sources */,
 				AE73339FAFABAEC324E2FFDDE25943F6 /* TypeViewModel.swift in Sources */,
 				BB9BE06232825B3C9F548E9AF3628505 /* ViewController.swift in Sources */,
 			);
@@ -555,13 +626,14 @@
 			files = (
 				90FE964EC92D303A7E7053F3B02078D6 /* CacheSpec.swift in Sources */,
 				FA1C5F99C66728EEF83308A2D0F6579A /* CachedCardSetServiceSpec.swift in Sources */,
-				460C930F2281BEA5004F9C0E /* CardCellSpec.swift in Sources */,
+				242BBBD0C02863555632E43368600B02 /* CardCellSpec.swift in Sources */,
 				4AA5345AFA0057B2CBC3EA963E8EE464 /* CardSetSpec.swift in Sources */,
 				5BAB38370C9F667E24BA4A2B4F683577 /* CardSpec.swift in Sources */,
-				460C93152281C9FB004F9C0E /* TypeCellSpec.swift in Sources */,
+				46E0EBF32281E4A20016EB1C /* CardSetListViewSpec.swift in Sources */,
 				01517ADFE6151212508331BE614868E9 /* NetworkServiceSpec.swift in Sources */,
 				EB666E84B56A8B48A7E495AA9FC4099D /* TimeTravelling.swift in Sources */,
 				048F5702FC8D0C741DE5609F40525A08 /* TypeCardGrouperSpec.swift in Sources */,
+				0D58B0D59D1677B6149E62F6768526B1 /* TypeCellSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
