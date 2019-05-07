@@ -16,6 +16,7 @@ targets:
       gatherCoverageData: true
     dependencies:
       - carthage: Alamofire
+      - carthage: SnapKit
 
   MagicTests:
     type: bundle.unit-test
@@ -26,3 +27,5 @@ targets:
       - carthage: Quick
       - carthage: Nimble
       - carthage: OHHTTPStubs
+      - carthage: Nimble_Snapshots
+      - carthage: FBSnapshotTestCase
