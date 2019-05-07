@@ -16,7 +16,12 @@ final class CardSetListView: UIView {
         flowLayout.scrollDirection = .vertical
         flowLayout.minimumLineSpacing = 15
 
-        return UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+
+        collection.backgroundView = nil
+        collection.backgroundColor = .clear
+
+        return collection
     }()
 
     override init(frame: CGRect) {
@@ -32,9 +37,6 @@ final class CardSetListView: UIView {
 extension CardSetListView: CodeView {
     func setupViews() {
         background.image = #imageLiteral(resourceName: "Background")
-
-        collection.backgroundView = nil
-        collection.backgroundColor = .clear
     }
 
     func setupHierarchy() {
