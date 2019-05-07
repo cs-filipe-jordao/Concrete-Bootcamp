@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class CardCell: UICollectionViewCell {
+final class CardCell: UICollectionViewCell {
     let banner = UIImageView()
 
     override init(frame: CGRect) {
