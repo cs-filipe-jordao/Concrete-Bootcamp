@@ -8,7 +8,6 @@
 import Foundation
 
 class TypeCardGroupingStrategy: CardGroupingStrategy {
-    typealias GroupKey = String
     typealias Grouped = [GroupKey: [MagicCard]]
 
     func group(cards: [MagicCard]) -> [GroupKey: [MagicCard]] {
