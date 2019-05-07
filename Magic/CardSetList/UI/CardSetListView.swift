@@ -32,7 +32,7 @@ final class CardSetListView: UIView {
 extension CardSetListView: CodeView {
     func setupViews() {
         background.image = #imageLiteral(resourceName: "Background")
-        
+
         collection.backgroundView = nil
         collection.backgroundColor = .clear
     }
