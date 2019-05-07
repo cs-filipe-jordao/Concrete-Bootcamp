@@ -7,8 +7,8 @@
 
 import Foundation
 
-class TypeViewModel: CellViewModel {
-    let cellId = "TypeHeaderCell"
+class TextCellViewModel: CellViewModel {
+    let cellId = "TextCell"
 
     let type: String
 
