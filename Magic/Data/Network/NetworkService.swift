@@ -41,6 +41,31 @@ extension NetworkService: CardService {
             .responseDecodable(completionHandler: alamofireCompletion)
             .resume()
     }
+
+    func fetchAllCards(from set: CardSet, completion: @escaping CardsCompletion) {
+        fetchCards(from: set, currentPage: 0, currentCards: [], completion: completion)
+    }
+
+    private func fetchCards(from set: CardSet,
+                            currentPage: Int,
+                            currentCards: [Card],
+                            completion: @escaping CardsCompletion) {
+        fetchCards(from: set, page: currentPage) { [weak self] result in
+            switch result {
+            case let .success(cards):
+                if cards.isEmpty {
+                    completion(.success(currentCards))
+                    return
+                }
+                self?.fetchCards(from: set,
+                                 currentPage: currentPage + 1,
+                                 currentCards: currentCards + cards,
+                                 completion: completion)
+            case .failure:
+                completion(result)
+            }
+        }
+    }
 }
 
 extension NetworkService: CardSetService {

@@ -10,4 +10,5 @@ import Foundation
 protocol CardService {
     typealias CardsCompletion = (Result<[Card], Error>) -> Void
     func fetchCards(from set: CardSet, page: Int, completion: @escaping CardsCompletion)
+    func fetchAllCards(from set: CardSet, completion: @escaping CardsCompletion)
 }
