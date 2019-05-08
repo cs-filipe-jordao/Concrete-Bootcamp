@@ -6,8 +6,8 @@
 //
 
 import Foundation
+import RxSwift
 
 public protocol CardSetService {
-    typealias SetsCompletion = (Result<[CardSet], Error>) -> Void
-    func fetchSets(completion: @escaping SetsCompletion)
+    func fetchSets() -> Single<[CardSet]>
 }
