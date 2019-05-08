@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol CardService {
     typealias CardsCompletion = (Result<[Card], Error>) -> Void
-    func fetchCards(from set: CardSet, page: Int, completion: @escaping CardsCompletion)
-    func fetchAllCards(from set: CardSet, completion: @escaping CardsCompletion)
+    
+    func fetchCards(from set: CardSet, page: Int) -> Single<[Card]>
+    func fetchAllCards(from set: CardSet) -> Single<[Card]>
 }

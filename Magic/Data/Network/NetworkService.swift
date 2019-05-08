@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import RxSwift
 
 class NetworkService {
     typealias ResultCompletion<T> = (Result<T, Error>) -> Void
@@ -27,43 +28,51 @@ class NetworkService {
 }
 
 extension NetworkService: CardService {
+
     private struct CardsResponse: Codable {
         let cards: [Card]
     }
-
-    func fetchCards(from set: CardSet, page: Int, completion: @escaping CardsCompletion) {
-        let url = baseUrl.appendingPathComponent("/v1/cards")
-        let alamofireCompletion: DataResponseCompletion<CardsResponse> = result(completion: completion,
-                                                                                mapper: { $0.cards })
-
-        AF.request(url, method: .get, parameters: [ "page": page,
-                                                    "set": set.code ])
-            .responseDecodable(completionHandler: alamofireCompletion)
-            .resume()
+    func fetchAllCards(from set: CardSet) -> Single<[Card]> {
+        return fetchCardsAllPages(from: set, from: 0).map { $0.0 }
     }
 
-    func fetchAllCards(from set: CardSet, completion: @escaping CardsCompletion) {
-        fetchCards(from: set, currentPage: 0, currentCards: [], completion: completion)
-    }
+    func fetchCards(from set: CardSet, page: Int) -> Single<[Card]> {
+        return Observable<[Card]>.create { [baseUrl] observer in
+            let url = baseUrl.appendingPathComponent("/v1/cards")
+            let params: [String: Any] =  [ "page": page,
+                                           "set": set.code ]
+            let request = AF.request(url, method: .get, parameters: params)
 
-    private func fetchCards(from set: CardSet,
-                            currentPage: Int,
-                            currentCards: [Card],
-                            completion: @escaping CardsCompletion) {
-        fetchCards(from: set, page: currentPage) { [weak self] result in
-            switch result {
-            case let .success(cards):
-                if cards.isEmpty {
-                    completion(.success(currentCards))
-                    return
+            request.responseDecodable(completionHandler: { (resp: DataResponse<CardsResponse>) in
+                switch resp.result {
+                case let .success(cardsResponse):
+                    let cards = cardsResponse.cards
+                    observer.onNext(cards)
+                    observer.onCompleted()
+
+                case let .failure(error):
+                    observer.onError(error)
                 }
-                self?.fetchCards(from: set,
-                                 currentPage: currentPage + 1,
-                                 currentCards: currentCards + cards,
-                                 completion: completion)
-            case .failure:
-                completion(result)
+            })
+            return Disposables.create {
+                request.cancel()
             }
+        }.asSingle()
+    }
+
+    private func fetchCardsAllPages(from set: CardSet, from page: Int) -> Single<([Card], Int)> {
+        return fetchCards(from: set, page: page)
+                .map { ($0, page)}
+            .flatMap {
+                let cards = $0.0
+                let page = $0.1
+
+                if cards.isEmpty {
+                    return .just((cards, page))
+                }
+
+                let nextPage = self.fetchCardsAllPages(from: set, from: page + 1)
+                return .zip(.just($0), nextPage, resultSelector: { ($0.0 + $1.0, $1.1)})
         }
     }
 }
