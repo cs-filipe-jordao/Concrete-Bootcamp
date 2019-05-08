@@ -10,8 +10,6 @@ import Alamofire
 import RxSwift
 
 class NetworkService {
-    typealias ResultCompletion<T> = (Result<T, Error>) -> Void
-    typealias DataResponseCompletion<T> = (DataResponse<T>) -> Void
     let baseUrl: URL
 
     init(baseUrl: URL) {
