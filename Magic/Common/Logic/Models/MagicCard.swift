@@ -15,3 +15,14 @@ struct MagicCard: Hashable {
     public let imageURL: URL?
     public let identifier: String
 }
+
+extension MagicCard {
+    init(card: Card) {
+        name = card.name
+        type = card.type
+        types = card.types
+        cardSet = card.cardSet
+        imageURL = card.imageURL.flatMap(URL.init)
+        identifier = card.identifier
+    }
+}

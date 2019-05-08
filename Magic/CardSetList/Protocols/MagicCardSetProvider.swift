@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol MagicCardSetProvider {
-    func fetch(page: Int, completion: @escaping (Result<CardSet, Error>) -> Void)
+    func fetch(page: Int) -> Single<MagicCardSet>
 }
