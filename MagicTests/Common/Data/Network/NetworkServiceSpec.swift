@@ -31,11 +31,7 @@ class NetworkServiceSpec: QuickSpec {
 
                 beforeEach {
                     self.stubSuccessSetsRequests(for: host)
-                    sut.fetchSets {
-                        if case let .success(s) = $0 {
-                            sets = s
-                        }
-                    }
+                    sets = try? sut.fetchSets().toBlocking().single()
                 }
 
                 it("Should complete with the expected ammount of sets") {

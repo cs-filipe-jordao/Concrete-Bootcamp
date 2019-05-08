@@ -17,14 +17,6 @@ class NetworkService {
     init(baseUrl: URL) {
         self.baseUrl = baseUrl
     }
-
-    fileprivate func result<T, K: Codable>(completion: @escaping ResultCompletion<T>,
-                                           mapper: @escaping (K) -> T) -> DataResponseCompletion<K> {
-        return { response in
-            let result = response.result.map(mapper)
-            completion(result)
-        }
-    }
 }
 
 extension NetworkService: CardService {
@@ -37,7 +29,7 @@ extension NetworkService: CardService {
     }
 
     func fetchCards(from set: CardSet, page: Int) -> Single<[Card]> {
-        return Observable<[Card]>.create { [baseUrl] observer in
+        return .create { [baseUrl] completion in
             let url = baseUrl.appendingPathComponent("/v1/cards")
             let params: [String: Any] =  [ "page": page,
                                            "set": set.code ]
@@ -47,22 +39,22 @@ extension NetworkService: CardService {
                 switch resp.result {
                 case let .success(cardsResponse):
                     let cards = cardsResponse.cards
-                    observer.onNext(cards)
-                    observer.onCompleted()
+                    completion(.success(cards))
 
                 case let .failure(error):
-                    observer.onError(error)
+                    completion(.error(error))
                 }
-            })
+            }).resume()
+
             return Disposables.create {
                 request.cancel()
             }
-        }.asSingle()
+        }
     }
 
     private func fetchCardsAllPages(from set: CardSet, from page: Int) -> Single<([Card], Int)> {
         return fetchCards(from: set, page: page)
-                .map { ($0, page)}
+            .map { ($0, page)}
             .flatMap {
                 let cards = $0.0
                 let page = $0.1
@@ -82,13 +74,25 @@ extension NetworkService: CardSetService {
         let sets: [CardSet]
     }
 
-    func fetchSets(completion: @escaping SetsCompletion) {
-        let url = baseUrl.appendingPathComponent("/v1/sets")
-        let alamofireCompletion: DataResponseCompletion<CardSetsResponse> = result(completion: completion,
-                                                                                   mapper: { $0.sets })
+    func fetchSets() -> Single<[CardSet]> {
+        return .create(subscribe: { [baseUrl] completion -> Disposable in
+            let url = baseUrl.appendingPathComponent("/v1/sets")
 
-        AF.request(url, method: .get)
-            .responseDecodable(completionHandler: alamofireCompletion)
-            .resume()
+            let request = AF.request(url, method: .get)
+
+            request.responseDecodable(completionHandler: { (resp: DataResponse<CardSetsResponse>) in
+                switch resp.result {
+                case let .success(setsResponse):
+                    let sets = setsResponse.sets
+                    completion(.success(sets))
+                case let .failure(error):
+                    completion(.error(error))
+                }
+            }).resume()
+
+            return Disposables.create {
+                request.cancel()
+            }
+        })
     }
 }

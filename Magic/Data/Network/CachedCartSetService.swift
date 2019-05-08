@@ -6,31 +6,35 @@
 //
 
 import Foundation
+import RxSwift
 
 public class CachedCardSetService: CardSetService {
     let cacheKey = "CARDSETS"
     let cache: Cache<[CardSet]>
     let service: CardSetService
 
+    private let disposeBag = DisposeBag()
+
     public init(service: CardSetService, cache: Cache<[CardSet]> = Cache()) {
         self.service = service
         self.cache = cache
     }
 
-    public func fetchSets(completion: @escaping SetsCompletion) {
+    public func fetchSets() -> Single<[CardSet]> {
         if let sets = cache.object(for: cacheKey) {
-            completion(.success(sets))
+            return .just(sets)
         } else {
-            service.fetchSets { [weak self] result in
-                guard
-                    let self = self,
-                    case let .success(sets) = result else { return }
+            let sets = service.fetchSets()
+            sets.subscribe(onSuccess: { [weak self] sets in
+                guard let self = self else { return }
 
                 self.cache.setObject(sets,
                                      for: self.cacheKey,
                                      timeout: 100000)
-                completion(result)
-            }
+            })
+            .disposed(by: disposeBag)
+
+            return sets
         }
     }
 }
