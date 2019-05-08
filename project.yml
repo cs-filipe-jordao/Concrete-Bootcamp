@@ -17,6 +17,9 @@ targets:
     dependencies:
       - carthage: Alamofire
       - carthage: SnapKit
+      - carthage: RxSwift
+      - carthage: RxRelay
+      - carthage: RxCocoa
 
   MagicTests:
     type: bundle.unit-test
@@ -29,3 +32,5 @@ targets:
       - carthage: OHHTTPStubs
       - carthage: Nimble_Snapshots
       - carthage: FBSnapshotTestCase
+      - carthage: RxTest
+      - carthage: RxBlocking

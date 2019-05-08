@@ -7,6 +7,7 @@
 
 import Quick
 import Nimble
+import RxSwift
 
 @testable import Magic
 
@@ -31,9 +32,10 @@ class CachedCardSetServiceSpec: QuickSpec {
             self.cardSet = cardSet
         }
 
-        func fetchSets(completion: @escaping SetsCompletion) {
+        func fetchSets() -> Single<[CardSet]> {
             didCallFetch = true
-            completion(.success([cardSet]))
+
+            return .just([cardSet])
         }
     }
 
@@ -52,18 +54,10 @@ class CachedCardSetServiceSpec: QuickSpec {
 
             context("When Sets are fetched") {
                 context("And there isnt a cached value") {
-                    var error: Error?
                     var result: [CardSet]?
 
                     beforeEach {
-                        sut.fetchSets(completion: { res in
-                            switch res {
-                            case let .success(sets):
-                                result = sets
-                            case let .failure(err):
-                                error = err
-                            }
-                        })
+                        result = try? sut.fetchSets().toBlocking().first()
                     }
 
                     it("Should cache the retrieved value") {
@@ -71,26 +65,17 @@ class CachedCardSetServiceSpec: QuickSpec {
                     }
 
                     it("Should complete with the retrieved value") {
-                        expect(error).toEventually(beNil())
                         expect(result).toEventually(equal([cardSet]))
                     }
                 }
             }
 
             context("And there is a cached value") {
-                var error: Error?
                 var result: [CardSet]?
 
                 beforeEach {
                     mockedCache.values[sut.cacheKey] = [cardSet]
-                    sut.fetchSets(completion: { res in
-                        switch res {
-                        case let .success(sets):
-                            result = sets
-                        case let .failure(err):
-                            error = err
-                        }
-                    })
+                    result = try? sut.fetchSets().toBlocking().single()
                 }
 
                 it("Shouldnt call fetch") {
@@ -98,7 +83,6 @@ class CachedCardSetServiceSpec: QuickSpec {
                 }
 
                 it("Should complete with the cached value") {
-                    expect(error).toEventually(beNil())
                     expect(result).toEventually(equal([cardSet]))
                 }
             }

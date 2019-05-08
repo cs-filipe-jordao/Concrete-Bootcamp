@@ -8,6 +8,7 @@
 import Quick
 import Nimble
 import OHHTTPStubs
+import RxBlocking
 
 @testable import Magic
 
@@ -30,11 +31,7 @@ class NetworkServiceSpec: QuickSpec {
 
                 beforeEach {
                     self.stubSuccessSetsRequests(for: host)
-                    sut.fetchSets {
-                        if case let .success(s) = $0 {
-                            sets = s
-                        }
-                    }
+                    sets = try? sut.fetchSets().toBlocking().single()
                 }
 
                 it("Should complete with the expected ammount of sets") {
@@ -48,11 +45,7 @@ class NetworkServiceSpec: QuickSpec {
                                       releaseDate: "2007-07-13")
                 beforeEach {
                     self.stubSuccessCardsRequests(for: host, and: cardSet)
-                    sut.fetchAllCards(from: cardSet) {
-                        if case let .success(c) = $0 {
-                            cards = c
-                        }
-                    }
+                    cards = try? sut.fetchAllCards(from: cardSet).toBlocking().single()
                 }
 
                 it("Should complete with the expected ammount of cards") {
