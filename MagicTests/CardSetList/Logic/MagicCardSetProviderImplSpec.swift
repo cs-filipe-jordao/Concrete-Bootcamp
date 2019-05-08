@@ -78,11 +78,8 @@ class MagicCardSetProviderImplSpec: QuickSpec {
 
                 cardSetServiceMock.sets = [cardSet]
 
-                let groupingStrategy = GroupingStrategyMock()
-
                 let sut = MagicCardSetProviderImpl(cardService: cardServiceMock,
-                                                   cardSetService: cardSetServiceMock,
-                                                   groupingStrategy: groupingStrategy)
+                                                   cardSetService: cardSetServiceMock)
 
                 let results = try? sut.fetch(page: 0).toBlocking().single()
 
@@ -111,14 +108,15 @@ class MagicCardSetProviderImplSpec: QuickSpec {
                 let date = Date.date(from: "2017-10-10")
                 let expectedSet = MagicCardSet(code: "asd",
                                                name: "A random card set",
-                                               releaseDate: date,
-                                               cards: ["group": [expectedCard1,
-                                                                 expectedCard2,
-                                                                 expectedCard3]])
+                                               releaseDate: date)
 
 
                 it("Should fetch the expected MagicCardSet") {
-                    expect(results).to(equal(expectedSet))
+                    expect(results?.set).to(equal(expectedSet))
+                }
+
+                it("Should fetch the cards of the set") {
+                    expect(results?.cards).to(equal([expectedCard1, expectedCard2, expectedCard3]))
                 }
             }
         }
@@ -131,6 +129,5 @@ extension MagicCardSet: Equatable {
         return lhs.code == rhs.code
             && lhs.name == rhs.name
             && lhs.releaseDate == rhs.releaseDate
-            && lhs.cards == rhs.cards
     }
 }

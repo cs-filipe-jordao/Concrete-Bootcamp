@@ -9,5 +9,5 @@ import Foundation
 import RxSwift
 
 protocol MagicCardSetProvider {
-    func fetch(page: Int) -> Single<MagicCardSet>
+    func fetch(page: Int) -> Single<(set: MagicCardSet, cards: [MagicCard])>
 }

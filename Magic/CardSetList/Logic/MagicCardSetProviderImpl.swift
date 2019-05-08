@@ -11,24 +11,25 @@ import RxSwift
 class MagicCardSetProviderImpl {
     let cardService: CardService
     let cardSetService: CardSetService
-    let groupingStrategy: CardGroupingStrategy
 
-    init(cardService: CardService, cardSetService: CardSetService, groupingStrategy: CardGroupingStrategy) {
+    init(cardService: CardService, cardSetService: CardSetService) {
         self.cardService = cardService
         self.cardSetService = cardSetService
-        self.groupingStrategy = groupingStrategy
     }
 }
 
 extension MagicCardSetProviderImpl: MagicCardSetProvider {
-    func fetch(page: Int) -> Single<MagicCardSet> {
+    func fetch(page: Int) -> Single<(set: MagicCardSet, cards: [MagicCard])> {
         let setObservable = cardSetService.fetchSets()
             .map { $0[page] }
 
         let cardsObservable = setObservable.flatMap(cardService.fetchAllCards)
             .map { $0.map(MagicCard.init) }
-            .map(groupingStrategy.group)
 
-        return Single<MagicCardSet>.zip(setObservable, cardsObservable, resultSelector: MagicCardSet.init)
+        let magicSetObservable = setObservable.map(MagicCardSet.init)
+
+        return .zip(magicSetObservable,
+                    cardsObservable,
+                    resultSelector: { (set: $0, cards: $1) })
     }
 }

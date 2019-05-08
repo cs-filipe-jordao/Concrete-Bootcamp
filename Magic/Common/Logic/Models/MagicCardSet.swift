@@ -11,14 +11,12 @@ struct MagicCardSet {
     public let code: String
     public let name: String
     public let releaseDate: Date?
-    public let cards: [String: [MagicCard]]
 }
 
 extension MagicCardSet {
-    init (set: CardSet, cards: [String: [MagicCard]]) {
+    init (set: CardSet) {
         code = set.code
         name = set.name
         releaseDate = Date.date(from: set.releaseDate)
-        self.cards = cards
     }
 }
