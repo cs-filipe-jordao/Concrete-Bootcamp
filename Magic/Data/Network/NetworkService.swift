@@ -18,10 +18,10 @@ class NetworkService {
 }
 
 extension NetworkService: CardService {
-
     private struct CardsResponse: Codable {
         let cards: [Card]
     }
+
     func fetchAllCards(from set: CardSet) -> Single<[Card]> {
         return fetchCardsAllPages(from: set, from: 0).map { $0.0 }
     }
