@@ -17,8 +17,7 @@ class MagicCardSetProviderImplSpec: QuickSpec {
         var pages = [[Card]]()
 
         func fetchCards(from set: CardSet, page: Int) -> Single<[Card]> {
-            return .just(pages[page])
-
+            return .just([])
         }
 
         func fetchAllCards(from set: CardSet) -> Single<[Card]> {
@@ -33,14 +32,6 @@ class MagicCardSetProviderImplSpec: QuickSpec {
 
         func fetchSets() -> Single<[CardSet]> {
             return .just(sets)
-        }
-    }
-
-    class GroupingStrategyMock: CardGroupingStrategy {
-        var groupName = "group"
-
-        func group(cards: [MagicCard]) -> [GroupKey : [MagicCard]] {
-            return [groupName: cards]
         }
     }
 
