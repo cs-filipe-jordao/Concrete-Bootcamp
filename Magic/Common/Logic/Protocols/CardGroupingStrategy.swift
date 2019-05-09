@@ -8,6 +8,6 @@
 import Foundation
 
 protocol CardGroupingStrategy {
-    associatedtype GroupKey: Hashable
+    typealias GroupKey = String
     func group(cards: [MagicCard]) -> [GroupKey: [MagicCard]]
 }
