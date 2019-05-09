@@ -99,15 +99,12 @@ class MagicCardSetProviderImplSpec: QuickSpec {
                 let date = Date.date(from: "2017-10-10")
                 let expectedSet = MagicCardSet(code: "asd",
                                                name: "A random card set",
-                                               releaseDate: date)
+                                               releaseDate: date,
+                                               cards: [expectedCard1, expectedCard2, expectedCard3])
 
 
                 it("Should fetch the expected MagicCardSet") {
-                    expect(results?.set).to(equal(expectedSet))
-                }
-
-                it("Should fetch the cards of the set") {
-                    expect(results?.cards).to(equal([expectedCard1, expectedCard2, expectedCard3]))
+                    expect(results).to(equal(expectedSet))
                 }
             }
         }
@@ -120,5 +117,6 @@ extension MagicCardSet: Equatable {
         return lhs.code == rhs.code
             && lhs.name == rhs.name
             && lhs.releaseDate == rhs.releaseDate
+            && lhs.cards == rhs.cards
     }
 }

@@ -19,17 +19,16 @@ class MagicCardSetProviderImpl {
 }
 
 extension MagicCardSetProviderImpl: MagicCardSetProvider {
-    func fetch(page: Int) -> Single<(set: MagicCardSet, cards: [MagicCard])> {
+    func fetch(page: Int) -> Single<MagicCardSet> {
         let setObservable = cardSetService.fetchSets()
             .map { $0[page] }
 
         let cardsObservable = setObservable.flatMap(cardService.fetchAllCards)
             .map { $0.map(MagicCard.init) }
 
-        let magicSetObservable = setObservable.map(MagicCardSet.init)
 
-        return .zip(magicSetObservable,
+        return .zip(setObservable,
                     cardsObservable,
-                    resultSelector: { (set: $0, cards: $1) })
+                    resultSelector: MagicCardSet.init)
     }
 }
