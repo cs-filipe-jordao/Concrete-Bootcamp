@@ -26,7 +26,6 @@ extension MagicCardSetProviderImpl: MagicCardSetProvider {
         let cardsObservable = setObservable.flatMap(cardService.fetchAllCards)
             .map { $0.map(MagicCard.init) }
 
-
         return .zip(setObservable,
                     cardsObservable,
                     resultSelector: MagicCardSet.init)
