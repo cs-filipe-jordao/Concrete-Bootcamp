@@ -110,13 +110,3 @@ class MagicCardSetProviderImplSpec: QuickSpec {
         }
     }
 }
-
-
-extension MagicCardSet: Equatable {
-    public static func == (lhs: MagicCardSet, rhs: MagicCardSet) -> Bool {
-        return lhs.code == rhs.code
-            && lhs.name == rhs.name
-            && lhs.releaseDate == rhs.releaseDate
-            && lhs.cards == rhs.cards
-    }
-}

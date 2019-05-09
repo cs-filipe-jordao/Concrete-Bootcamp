@@ -31,6 +31,8 @@
 		431376FC685738CCC1DEA3CCAF36166A /* CardSetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891F97D100308A002808C816D39E445B /* CardSetListView.swift */; };
 		466EC06B2283635E005DD101 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466EC06A2283635E005DD101 /* Date+Extensions.swift */; };
 		466EC06E228373B6005DD101 /* MagicCardSetProviderImplSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466EC06D228373B6005DD101 /* MagicCardSetProviderImplSpec.swift */; };
+		46A936DC228447A9004ABFCA /* CardSetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A936DB228447A9004ABFCA /* CardSetListViewModel.swift */; };
+		46A936DF22845B51004ABFCA /* CardSetListViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A936DE22845B51004ABFCA /* CardSetListViewModelSpec.swift */; };
 		4954B77A3C914C342FF2B8CCEF27BC09 /* CachedCartSetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF4FC350E04F5E8961CAC71C41B7491 /* CachedCartSetService.swift */; };
 		4FD83ED252ECA3957D54C2AB07320520 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EC8E9F3B55C8389311513288F0F728 /* CardViewModel.swift */; };
 		500CE221440CE141C684314BF18DB6FD /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 857035761DBFFFBDA641D43A064931D8 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -127,6 +129,8 @@
 		40B958FF277A36A4CD59B4BB578CB040 /* MagicTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MagicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		466EC06A2283635E005DD101 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		466EC06D228373B6005DD101 /* MagicCardSetProviderImplSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardSetProviderImplSpec.swift; sourceTree = "<group>"; };
+		46A936DB228447A9004ABFCA /* CardSetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSetListViewModel.swift; sourceTree = "<group>"; };
+		46A936DE22845B51004ABFCA /* CardSetListViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSetListViewModelSpec.swift; sourceTree = "<group>"; };
 		516F7DF69BC93633EB056AD7C7F5D817 /* CachedCardSetServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedCardSetServiceSpec.swift; sourceTree = "<group>"; };
 		53345D0C4BD688E24D28A3223980FB7E /* CardSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSet.swift; sourceTree = "<group>"; };
 		5574D8810CB4A3F14FB185C9EF2791CE /* CacheSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheSpec.swift; sourceTree = "<group>"; };
@@ -308,6 +312,22 @@
 			path = Logic;
 			sourceTree = "<group>";
 		};
+		466EC06F22844729005DD101 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				46A936DB228447A9004ABFCA /* CardSetListViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		46A936DD22845B44004ABFCA /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				46A936DE22845B51004ABFCA /* CardSetListViewModelSpec.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		47D4CA0FAEC4144E5B48F376B87F2224 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
@@ -467,6 +487,7 @@
 		BFF6F56F10D5E71B63CDEB6387FFDFD0 /* CardSetList */ = {
 			isa = PBXGroup;
 			children = (
+				46A936DD22845B44004ABFCA /* ViewModels */,
 				466EC06C228373A7005DD101 /* Logic */,
 				5AF08AB79EBD8EDC98219889F9C1E6F8 /* UI */,
 			);
@@ -495,6 +516,7 @@
 		D31FDFEE16FE549A73B807FC67B4C00C /* CardSetList */ = {
 			isa = PBXGroup;
 			children = (
+				466EC06F22844729005DD101 /* ViewModels */,
 				3F6064E3C9C0852C481E4F08C6A89ECB /* Logic */,
 				27C326C343309755B0A74F11EDEF7C93 /* Protocols */,
 				B3D011EB608D5D988A9AED06B798A1A0 /* UI */,
@@ -699,6 +721,7 @@
 				BD90D09DFD411918A117AB707805CCE7 /* AppDelegate.swift in Sources */,
 				D01A2AF93515FA25D7FE8052B7D56C35 /* Cache.swift in Sources */,
 				4954B77A3C914C342FF2B8CCEF27BC09 /* CachedCartSetService.swift in Sources */,
+				46A936DC228447A9004ABFCA /* CardSetListViewModel.swift in Sources */,
 				5341C36CD181B8F576CDC7F93AF550C6 /* Card.swift in Sources */,
 				5642160941FD94DCAD4E965AE9C0C3EE /* CardCell.swift in Sources */,
 				1E0E692CD2830CB0444FAF045CBE58E0 /* CardGroupingStrategy.swift in Sources */,
@@ -729,6 +752,7 @@
 			files = (
 				947C61248A67F581AE811C9D4BB0E18E /* CacheSpec.swift in Sources */,
 				CFADCC64ED5E37CB6BBEC273DE8674BA /* CachedCardSetServiceSpec.swift in Sources */,
+				46A936DF22845B51004ABFCA /* CardSetListViewModelSpec.swift in Sources */,
 				BD379655D55CE66E47AC6189EDA818C2 /* CardCellSpec.swift in Sources */,
 				08B97983D128FE1C3B3F3993FF0C5545 /* CardSetListViewSpec.swift in Sources */,
 				87BB17AD281F02DF4A4360A5796E3458 /* CardSetSpec.swift in Sources */,

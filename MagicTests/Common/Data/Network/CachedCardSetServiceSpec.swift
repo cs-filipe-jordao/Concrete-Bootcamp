@@ -96,5 +96,3 @@ extension CardSet: Equatable {
             && lhs.releaseDate == rhs.releaseDate
     }
 }
-
-
