@@ -16,7 +16,7 @@ class CardSetListViewModel {
         case initial
         case loading
         case loadingPage
-        case loaded([MagicCardSet])
+        case loaded([CollectionViewSectionViewModel])
         case error(String)
     }
 
@@ -24,11 +24,13 @@ class CardSetListViewModel {
     private let nextPage = BehaviorRelay(value: 0)
     private let disposeBag: DisposeBag
     private let dataSource: MagicCardSetProvider
+    private let groupingStrategy: CardGroupingStrategy
 
-    init(dataSource: MagicCardSetProvider) {
+    init(dataSource: MagicCardSetProvider, groupingStrategy: CardGroupingStrategy) {
         state = privateState.asDriver()
         disposeBag = DisposeBag()
         self.dataSource = dataSource
+        self.groupingStrategy = groupingStrategy
     }
 
     func bindDidLoad(_ observable: Driver<Void>) {
@@ -41,6 +43,7 @@ class CardSetListViewModel {
             .map { 0 }
             .asObservable()
             .flatMap(dataSource.fetch)
+            .map(self.section)
             .map { State.loaded([$0]) }
             .asDriver(onErrorJustReturn: .error("Something wrong happened"))
             .drive(onNext: { [weak self] state in
@@ -49,5 +52,18 @@ class CardSetListViewModel {
                 self.nextPage.accept(1)
             })
             .disposed(by: disposeBag)
+    }
+
+    func section(from cardSet: MagicCardSet) -> CollectionViewSectionViewModel {
+        let groupedCards = groupingStrategy.group(cards: cardSet.cards)
+
+        let cellsViewModels = groupedCards.flatMap { (group) -> [CellViewModel] in
+            let cards = group.value.map { CardViewModel(imageURL: $0.imageURL) }
+
+            return [TextCellViewModel(type: group.key)] + cards
+        }
+
+        return CollectionViewSectionViewModel(title: cardSet.name,
+                                              cells: cellsViewModels)
     }
 }

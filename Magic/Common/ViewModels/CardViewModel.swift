@@ -16,3 +16,9 @@ class CardViewModel: CellViewModel {
         self.imageURL = imageURL
     }
 }
+
+extension CardViewModel: Equatable {
+    static func == (lhs: CardViewModel, rhs: CardViewModel) -> Bool {
+        return lhs.imageURL == rhs.imageURL
+    }
+}

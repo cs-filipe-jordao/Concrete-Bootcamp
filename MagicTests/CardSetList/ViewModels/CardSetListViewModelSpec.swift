@@ -20,13 +20,24 @@ class MagicCardSetListViewModelSpec: QuickSpec {
             return cardSet
         }
     }
+
+    class MockGroupingStrategy: CardGroupingStrategy {
+        func group(cards: [MagicCard]) -> [GroupKey : [MagicCard]] {
+            return ["group": cards]
+        }
+    }
+
     override func spec() {
         describe("A CardSetListViewModel") {
             var provider: MockCardSetProvider!
+            var groupingStrategy: MockGroupingStrategy!
             var sut: CardSetListViewModel!
+
             beforeEach {
                 provider = MockCardSetProvider()
-                sut = CardSetListViewModel(dataSource: provider)
+                groupingStrategy = MockGroupingStrategy()
+                sut = CardSetListViewModel(dataSource: provider,
+                                           groupingStrategy: groupingStrategy)
             }
 
             context("When initialized") {
@@ -59,7 +70,9 @@ class MagicCardSetListViewModelSpec: QuickSpec {
                     }
 
                     it("Should emit the expected states") {
-                        expect(states).to(equal([.initial, .loading, .loaded([set])]))
+                        let cells = [TextCellViewModel(type: "group")]
+                        let expectedSection = CollectionViewSectionViewModel(title: set.name, cells: cells)
+                        expect(states).to(equal([.initial, .loading, .loaded([expectedSection])]))
                     }
                 }
 
