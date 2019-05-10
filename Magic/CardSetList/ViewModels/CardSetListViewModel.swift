@@ -39,7 +39,10 @@ class CardSetListViewModel {
             .drive(privateState)
             .disposed(by: disposeBag)
 
-        let firstPage = fetchPage(page: 0).asObservable()
+        let firstPage = fetchPage(page: 0)
+            .map { (state: State.loaded($0.sections), page: $0.page)}
+            .asObservable()
+
         bindFetchResult(result: firstPage)
     }
 
@@ -50,14 +53,19 @@ class CardSetListViewModel {
             .filter { $0 != .loadingPage && $0 != .loading }
             .withLatestFrom(nextPage.asObservable())
             .flatMap(fetchPage)
+            .scan((sections: [CollectionViewSectionViewModel](), page: 0)) { accumulated, current in
+                return (sections: accumulated.sections + current.sections,
+                        page: current.page)
+            }
+            .map { (state: State.loaded($0.sections), page: $0.page)}
 
         bindFetchResult(result: nextPageObs)
     }
 
-    func fetchPage(page: Int) -> Single<(state: State, page: Int)> {
+    func fetchPage(page: Int) -> Single<(sections: [CollectionViewSectionViewModel], page: Int)> {
         return dataSource.fetch(page: page)
             .map(self.section)
-            .map { (State.loaded([$0]), page) }
+            .map { ([$0], page) }
     }
 
     private func bindFetchResult(result: Observable<(state: State, page: Int)>) {
