@@ -30,6 +30,7 @@ class CardSetListViewController: UIViewController {
         setupDataSource()
 
         viewModel.bindDidLoad(didLoadDriver())
+        viewModel.bindEndOfPage(didReachBottom())
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -95,7 +96,7 @@ class CardSetListViewController: UIViewController {
 
             return cell
         })
-        
+
         return dataSource
     }
 
@@ -103,6 +104,13 @@ class CardSetListViewController: UIViewController {
         return rx.sentMessage(#selector(viewDidLoad))
             .map {_ in Void() }
             .asDriver(onErrorDriveWith: .empty())
+    }
+
+    func didReachBottom() -> Driver<Void> {
+        return cardSetView.collection
+            .isNearBottom()
+            .filter { $0 == true }
+            .map { _ in Void() }
     }
 }
 
