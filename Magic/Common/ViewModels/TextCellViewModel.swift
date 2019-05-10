@@ -16,3 +16,9 @@ class TextCellViewModel: CellViewModel {
         self.type = type
     }
 }
+
+extension TextCellViewModel: Equatable {
+    static func == (lhs: TextCellViewModel, rhs: TextCellViewModel) -> Bool {
+        return lhs.type == rhs.type
+    }
+}
