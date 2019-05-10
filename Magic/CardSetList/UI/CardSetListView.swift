@@ -13,12 +13,12 @@ final class CardSetListView: UIView {
     let activityIndicator = UIActivityIndicatorView(style: .white)
 
     let collection: UICollectionView = {
-        let flowLayout = UICollectionViewFlowLayout()
+        let flowLayout = LeftAlignedCollectionViewFlowLayout()
         flowLayout.scrollDirection = .vertical
         flowLayout.minimumLineSpacing = 15
 
         let collection = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
-        collection.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+        collection.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: -10)
         collection.backgroundView = nil
         collection.backgroundColor = .clear
 

@@ -38,8 +38,11 @@ class CardSetListViewController: UIViewController {
     }
 
     func registerCells() {
+        cardSetView.collection.register(CollectionViewSectionHeader.self,
+                                        forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                        withReuseIdentifier: "SectionHeader")
         cardSetView.collection.register(CardCell.self, forCellWithReuseIdentifier: "MagicCardCell")
-        cardSetView.collection.register(TypeCell.self, forCellWithReuseIdentifier: "TextCell")
+        cardSetView.collection.register(TextCell.self, forCellWithReuseIdentifier: "TextCell")
     }
 
     func setupDelegate() {
@@ -85,17 +88,28 @@ class CardSetListViewController: UIViewController {
         let dataSource = DataSource(configureCell: { _, collection, indexPath, item in
             let cell =  collection.dequeueReusableCell(withReuseIdentifier: item.cellId, for: indexPath)
 
-            if let typeCell = cell as? TypeCell,
+            if let typeCell = cell as? TextCell,
                 let item = item as? TextCellViewModel {
                     typeCell.typeLabel.text = item.type
             }
             if let cardCell = cell as? CardCell,
                 let item = item as? CardViewModel {
+                cardCell.banner.image = nil
                 cardCell.loadImage(url: item.imageURL)
             }
 
             return cell
         })
+
+        dataSource.configureSupplementaryView = { dataSource, collection, kind, index in
+            guard let section = collection.dequeueReusableSupplementaryView(ofKind: kind,
+                                                                            withReuseIdentifier: "SectionHeader",
+                                                                            for: index) as? CollectionViewSectionHeader
+                else { return UICollectionReusableView() }
+
+            section.title.text = dataSource[index.section].model
+            return section
+        }
 
         return dataSource
     }
@@ -130,11 +144,16 @@ extension CardSetListViewController: UICollectionViewDelegateFlowLayout {
         let collectionWidth = collectionView.frame.width
         switch item {
         case is CardViewModel:
-            let width = (collectionWidth/3) - 20
+            let width = (collectionWidth - 40)/3
             let height = width * 1.38
             return CGSize(width: width, height: height)
         default:
             return CGSize(width: collectionWidth, height: 0)
         }
+    }
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 80)
     }
 }

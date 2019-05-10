@@ -1,5 +1,5 @@
 //
-//  TypeCell.swift
+//  TextCell.swift
 //  Magic
 //
 //  Created by filipe.n.jordao on 07/05/19.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TypeCell: UICollectionViewCell {
+final class TextCell: UICollectionViewCell {
     let typeLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
@@ -27,7 +27,7 @@ final class TypeCell: UICollectionViewCell {
     }
 }
 
-extension TypeCell: CodeView {
+extension TextCell: CodeView {
     func setupHierarchy() {
         contentView.addSubview(typeLabel)
     }
