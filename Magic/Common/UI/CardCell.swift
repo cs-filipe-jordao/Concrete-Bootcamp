@@ -40,6 +40,9 @@ final class CardCell: UICollectionViewCell {
 extension CardCell: CodeView {
     func setupViews() {
         banner.contentMode = .scaleAspectFill
+        banner.clipsToBounds = true
+        contentView.layer.cornerRadius = 5
+        contentView.clipsToBounds = true
     }
 
     func setupHierarchy() {
