@@ -29,7 +29,7 @@ struct CellViewModelEquatable: CellViewModel, Equatable {
     init(_ value: CellViewModel) { self.value = value }
     private let value: CellViewModel
 
-    static func ==(lhs: CellViewModelEquatable, rhs: CellViewModelEquatable) -> Bool {
+    static func == (lhs: CellViewModelEquatable, rhs: CellViewModelEquatable) -> Bool {
         return lhs.value.isEqualTo(rhs.value)
     }
 }

@@ -39,22 +39,38 @@ class CardSetListViewModel {
             .drive(privateState)
             .disposed(by: disposeBag)
 
-        observable
-            .map { 0 }
+        let firstPage = fetchPage(page: 0).asObservable()
+        bindFetchResult(result: firstPage)
+    }
+
+    func bindEndOfPage(_ observable: Driver<Void>) {
+        let nextPageObs = observable
             .asObservable()
-            .flatMap(dataSource.fetch)
+            .withLatestFrom(state)
+            .filter { $0 != .loadingPage && $0 != .loading }
+            .withLatestFrom(nextPage.asObservable())
+            .flatMap(fetchPage)
+
+        bindFetchResult(result: nextPageObs)
+    }
+
+    func fetchPage(page: Int) -> Single<(state: State, page: Int)> {
+        return dataSource.fetch(page: page)
             .map(self.section)
-            .map { State.loaded([$0]) }
-            .asDriver(onErrorJustReturn: .error("Something wrong happened"))
-            .drive(onNext: { [weak self] state in
+            .map { (State.loaded([$0]), page) }
+    }
+
+    private func bindFetchResult(result: Observable<(state: State, page: Int)>) {
+        result.asDriver(onErrorJustReturn: (.error("Something wrong happened"), 0))
+            .drive(onNext: { [weak self] result in
                 guard let self = self else { return }
-                self.privateState.accept(state)
-                self.nextPage.accept(1)
+                self.privateState.accept(result.state)
+                self.nextPage.accept(result.page + 1)
             })
             .disposed(by: disposeBag)
     }
 
-    func section(from cardSet: MagicCardSet) -> CollectionViewSectionViewModel {
+    private func section(from cardSet: MagicCardSet) -> CollectionViewSectionViewModel {
         let groupedCards = groupingStrategy.group(cards: cardSet.cards)
 
         let cellsViewModels = groupedCards.flatMap { (group) -> [CellViewModel] in
