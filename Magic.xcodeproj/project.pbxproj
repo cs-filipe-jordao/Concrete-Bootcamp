@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		0EC9BDEB1E99FCA58AD3E4D3549ABF76 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B52CD78997CF0FC7F1EAB8BA1DD2C7D /* SnapKit.framework */; };
 		104200B2D1C2DB1F41FC7C4F0B20FE54 /* TextCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924F849AF13B26C78B47524CB544DA2 /* TextCellViewModel.swift */; };
 		12789F5BD31BDCDD7AE84EFB437DBA27 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDC48085E92C66DE1F905C12CD05FD41 /* RxCocoa.framework */; };
+		12E5D851A85790AA4914CD265C9BEBAA /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D46ED09870529D287E0EDF08E582CBB /* Nuke.framework */; };
 		1454B4FFC4CB599F25C668131AAB4B90 /* TypeCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86659F76EACD31294E3B9F56D125421D /* TypeCell@2x.png */; };
 		1C34EEA4CB511A7A4AAFDA51E2574929 /* CollectionViewSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94CC13583DBAA5CD3682DF96EB13904 /* CollectionViewSectionViewModel.swift */; };
 		1E0E692CD2830CB0444FAF045CBE58E0 /* CardGroupingStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0399F0C813E46E884CC92C5176D2E3CF /* CardGroupingStrategy.swift */; };
@@ -64,6 +65,7 @@
 		BD90D09DFD411918A117AB707805CCE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643B2E771BBB60AE3A53BE0C734A6931 /* AppDelegate.swift */; };
 		BF17D2045C02BFE14392A96C0AB152AB /* TypeCardGrouperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DEE82E76CF8EB923E15CD03740948 /* TypeCardGrouperSpec.swift */; };
 		C12AB9FF77E0D373203C54B37CB66270 /* Sets.json in Resources */ = {isa = PBXBuildFile; fileRef = A9CC797423735D715F1AC0856DA9DE07 /* Sets.json */; };
+		C72BEC6F566F462A667C2CF2015A3BCE /* Nuke.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6D46ED09870529D287E0EDF08E582CBB /* Nuke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CA741B238FE5C375CC605F92F249A5E8 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9AA413F01270431EB0B50CB84CABF58 /* OHHTTPStubs.framework */; };
 		CC26ACF137D59A64C8D62F4D036EF2F4 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 277990D0FA7A21130ABD56192D6A81BF /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CFADCC64ED5E37CB6BBEC273DE8674BA /* CachedCardSetServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516F7DF69BC93633EB056AD7C7F5D817 /* CachedCardSetServiceSpec.swift */; };
@@ -106,6 +108,7 @@
 				02360B1AACB45903D91858FF405D52BE /* FBSnapshotTestCase.framework in Embed Frameworks */,
 				500CE221440CE141C684314BF18DB6FD /* Nimble.framework in Embed Frameworks */,
 				5810AD324D7AC47B65E1F53CD1B80D9A /* Nimble_Snapshots.framework in Embed Frameworks */,
+				C72BEC6F566F462A667C2CF2015A3BCE /* Nuke.framework in Embed Frameworks */,
 				E86EE38F2E7E5D732086F37FBA743F48 /* OHHTTPStubs.framework in Embed Frameworks */,
 				CC26ACF137D59A64C8D62F4D036EF2F4 /* Quick.framework in Embed Frameworks */,
 				EEB0D02A8DD238C24894F72D33BDF0E1 /* RxBlocking.framework in Embed Frameworks */,
@@ -141,7 +144,7 @@
 		516F7DF69BC93633EB056AD7C7F5D817 /* CachedCardSetServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedCardSetServiceSpec.swift; sourceTree = "<group>"; };
 		53345D0C4BD688E24D28A3223980FB7E /* CardSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSet.swift; sourceTree = "<group>"; };
 		5574D8810CB4A3F14FB185C9EF2791CE /* CacheSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheSpec.swift; sourceTree = "<group>"; };
-		5671E9D39508D5FE5FE33CE147772332 /* Cards.json */ = {isa = PBXFileReference; path = Cards.json; sourceTree = "<group>"; };
+		5671E9D39508D5FE5FE33CE147772332 /* Cards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Cards.json; sourceTree = "<group>"; };
 		5C7C1D01C82E4D6CB2B318C7357204C8 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		643B2E771BBB60AE3A53BE0C734A6931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		647BEA4AA0041F30D70AB2682BA826ED /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -149,6 +152,7 @@
 		669158D07267EDADD16AB6082704F236 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		6BEE818AAB414649791FEF8D90E740A5 /* Differentiator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Differentiator.framework; sourceTree = "<group>"; };
 		6C02D08FDA0F98A07595ECCB9625D13A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6D46ED09870529D287E0EDF08E582CBB /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nuke.framework; sourceTree = "<group>"; };
 		700FDD75404DD88EA8F7DBF8BFFD43BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72F5F692EF2A52636A23A0BA35C1B9DD /* MagicCardSetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardSetProvider.swift; sourceTree = "<group>"; };
 		72FD2D2CEC8DD021447EC297AAB63F27 /* MagicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCard.swift; sourceTree = "<group>"; };
@@ -166,7 +170,7 @@
 		A065C867EFC16C1EA21EB355E8F8DAB7 /* CardSetSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSetSpec.swift; sourceTree = "<group>"; };
 		A06DEE82E76CF8EB923E15CD03740948 /* TypeCardGrouperSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCardGrouperSpec.swift; sourceTree = "<group>"; };
 		A2EEC8EE51DBB557E35ABB1972F8A0B3 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxTest.framework; sourceTree = "<group>"; };
-		A9CC797423735D715F1AC0856DA9DE07 /* Sets.json */ = {isa = PBXFileReference; path = Sets.json; sourceTree = "<group>"; };
+		A9CC797423735D715F1AC0856DA9DE07 /* Sets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sets.json; sourceTree = "<group>"; };
 		ABA287B0F25D402375C06EDEBA7729DD /* CardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardService.swift; sourceTree = "<group>"; };
 		B1A4808FC8D210F574BDA31EE378EF36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B62DD50C58B3C4D28CD5FA3181DC675D /* CardSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSpec.swift; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 				12789F5BD31BDCDD7AE84EFB437DBA27 /* RxCocoa.framework in Frameworks */,
 				99D13D1961B532ED362DAB349E440C2A /* RxDataSources.framework in Frameworks */,
 				3F57DADAF401B40E8065137B436510BD /* Differentiator.framework in Frameworks */,
+				12E5D851A85790AA4914CD265C9BEBAA /* Nuke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +366,7 @@
 				F00E55EDE33EE690052377AFEB589359 /* FBSnapshotTestCase.framework */,
 				19316034B3F732DA9CE805F400FF3CB3 /* Nimble_Snapshots.framework */,
 				857035761DBFFFBDA641D43A064931D8 /* Nimble.framework */,
+				6D46ED09870529D287E0EDF08E582CBB /* Nuke.framework */,
 				F9AA413F01270431EB0B50CB84CABF58 /* OHHTTPStubs.framework */,
 				277990D0FA7A21130ABD56192D6A81BF /* Quick.framework */,
 				1CB3296FD96231D3873689E4E51D5FFF /* RxBlocking.framework */,
@@ -664,6 +670,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
 				Base,
 			);
 			mainGroup = BBA3A022BB3D71DC3E6467AB6FDAF887;
@@ -728,6 +735,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nuke.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
@@ -738,6 +746,7 @@
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Differentiator.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nuke.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxDataSources.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
@@ -894,7 +903,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = MagicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jordao.filipe.magic.MagicTests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -912,7 +925,11 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = MagicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jordao.filipe.magic.MagicTests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -932,7 +949,10 @@
 				);
 				INFOPLIST_FILE = Magic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jordao.filipe.magic.Magic;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -950,7 +970,10 @@
 				);
 				INFOPLIST_FILE = Magic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jordao.filipe.magic.Magic;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

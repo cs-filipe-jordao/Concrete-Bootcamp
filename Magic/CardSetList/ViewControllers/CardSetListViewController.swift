@@ -5,10 +5,12 @@
 //  Created by filipe.n.jordao on 09/05/19.
 //
 
+import Nuke
 import UIKit
 import RxDataSources
 import RxSwift
 import RxCocoa
+
 
 class CardSetListViewController: UIViewController {
     private let cardSetView = CardSetListView()
@@ -67,8 +69,9 @@ class CardSetListViewController: UIViewController {
                 let item = item as? TextCellViewModel {
                     typeCell.typeLabel.text = item.type
             }
-            if let cardCell = cell as? CardCell {
-                cardCell.banner.image = #imageLiteral(resourceName: "cardback")
+            if let cardCell = cell as? CardCell,
+                let item = item as? CardViewModel {
+                cardCell.loadImage(url: item.imageURL)
             }
 
             return cell
@@ -102,7 +105,7 @@ extension CardSetListViewController: UICollectionViewDelegateFlowLayout {
             let height = width * 1.38
             return CGSize(width: width, height: height)
         default:
-            return CGSize(width: collectionWidth, height: 40)
+            return CGSize(width: collectionWidth, height: 0)
         }
     }
 }

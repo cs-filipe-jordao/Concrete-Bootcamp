@@ -5,6 +5,7 @@
 //  Created by filipe.n.jordao on 07/05/19.
 //
 
+import Nuke
 import UIKit
 import SnapKit
 
@@ -15,9 +16,24 @@ final class CardCell: UICollectionViewCell {
         super.init(frame: frame)
         configureView()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    func loadImage(url: URL?) {
+        guard let url = url else {
+            banner.image = #imageLiteral(resourceName: "cardback")
+            return
+        }
+
+        Nuke.loadImage(
+            with: url,
+            options: ImageLoadingOptions(
+                placeholder: #imageLiteral(resourceName: "cardback"),
+                transition: .fadeIn(duration: 0.33)
+            ),
+            into: banner)
     }
 }
 
