@@ -41,6 +41,7 @@ class CardSetListViewController: UIViewController {
         cardSetView.collection.register(CollectionViewSectionHeader.self,
                                         forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                         withReuseIdentifier: "SectionHeader")
+
         cardSetView.collection.register(CardCell.self, forCellWithReuseIdentifier: "MagicCardCell")
         cardSetView.collection.register(TextCell.self, forCellWithReuseIdentifier: "TextCell")
     }
@@ -57,7 +58,7 @@ class CardSetListViewController: UIViewController {
     }
 
     func setupDataSource() {
-        let sections = self.sections()
+        let sections = sectionsRelay.asDriver()
         sections.drive(cardSetView.collection.rx.items(dataSource: dataSource()))
             .disposed(by: disposeBag)
     }
@@ -66,7 +67,7 @@ class CardSetListViewController: UIViewController {
         viewModel.state
             .drive(onNext: { [weak self] state in
                 guard let self = self else { return }
-                self.cardSetView.activityIndicator.isHidden = state != .loading
+                self.cardSetView.activityIndicator.isHidden = state != .loading || state != .loadingPage
             })
             .disposed(by: disposeBag)
     }
@@ -92,9 +93,9 @@ class CardSetListViewController: UIViewController {
                 let item = item as? TextCellViewModel {
                     typeCell.typeLabel.text = item.type
             }
+
             if let cardCell = cell as? CardCell,
                 let item = item as? CardViewModel {
-                cardCell.banner.image = nil
                 cardCell.loadImage(url: item.imageURL)
             }
 

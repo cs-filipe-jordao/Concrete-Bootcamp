@@ -47,10 +47,18 @@ class CardSetListViewModel {
     }
 
     func bindEndOfPage(_ observable: Driver<Void>) {
-        let nextPageObs = observable
-            .asObservable()
+        let isLoadingObservable = observable
             .withLatestFrom(state)
             .filter { $0 != .loadingPage && $0 != .loading }
+
+        isLoadingObservable
+            .map { _ in State.loadingPage }
+            .debug("nextPage")
+            .drive(privateState)
+            .disposed(by: disposeBag)
+
+        let nextPageObs = isLoadingObservable
+            .asObservable()
             .withLatestFrom(nextPage.asObservable())
             .flatMap(fetchPage)
             .scan((sections: [CollectionViewSectionViewModel](), page: 0)) { accumulated, current in

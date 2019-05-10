@@ -11,10 +11,15 @@ import SnapKit
 
 final class CardCell: UICollectionViewCell {
     let banner = UIImageView()
+    private var imageTask: Nuke.ImageTask?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureView()
+    }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageTask?.cancel()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -27,7 +32,7 @@ final class CardCell: UICollectionViewCell {
             return
         }
 
-        Nuke.loadImage(
+        imageTask = Nuke.loadImage(
             with: url,
             options: ImageLoadingOptions(
                 placeholder: #imageLiteral(resourceName: "cardback"),
