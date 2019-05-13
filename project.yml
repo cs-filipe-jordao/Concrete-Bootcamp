@@ -20,6 +20,7 @@ targets:
       - carthage: RxSwift
       - carthage: RxRelay
       - carthage: RxCocoa
+      - carthage: UPCarouselFlowLayout
 
   MagicTests:
     type: bundle.unit-test

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UPCarouselFlowLayout
 
 class CardListDetailView: UIView {
     let background = UIImageView()
@@ -32,10 +33,8 @@ class CardListDetailView: UIView {
     }()
 
     let collection: UICollectionView = {
-        let flowLayout = UICollectionViewFlowLayout()
+        let flowLayout = UPCarouselFlowLayout()
         flowLayout.scrollDirection = .horizontal
-        flowLayout.minimumLineSpacing = 15
-
         let collection = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
 
         collection.backgroundView = nil
@@ -51,6 +50,11 @@ class CardListDetailView: UIView {
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    func setItemSize(_ size: CGSize) {
+        guard let layout = collection.collectionViewLayout as? UPCarouselFlowLayout else { return }
+        layout.itemSize = size
     }
 }
 

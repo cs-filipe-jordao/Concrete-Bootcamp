@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -31,7 +31,6 @@
 		3C91FFD6B6749F57C4E569D77CE817DD /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857035761DBFFFBDA641D43A064931D8 /* Nimble.framework */; };
 		3E5B05CE420E32E927E19EB57ECC050B /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2EEC8EE51DBB557E35ABB1972F8A0B3 /* RxTest.framework */; };
 		431376FC685738CCC1DEA3CCAF36166A /* CardSetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891F97D100308A002808C816D39E445B /* CardSetListView.swift */; };
-		466351E0228A063900432D02 /* CardSetListDetailViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466351DF228A063900432D02 /* CardSetListDetailViewSpec.swift */; };
 		4954B77A3C914C342FF2B8CCEF27BC09 /* CachedCartSetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF4FC350E04F5E8961CAC71C41B7491 /* CachedCartSetService.swift */; };
 		4FD83ED252ECA3957D54C2AB07320520 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EC8E9F3B55C8389311513288F0F728 /* CardViewModel.swift */; };
 		500CE221440CE141C684314BF18DB6FD /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 857035761DBFFFBDA641D43A064931D8 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -44,13 +43,16 @@
 		659D5B0E332EAEEFDE8E043CFBCE4533 /* CardListDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF328707C424C9123BFAEAA994FE67F3 /* CardListDetailView.swift */; };
 		7085CEB106E69D860E63D645FE4FD832 /* TypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7940679B4D6E893209A67A8AFB78816 /* TypeCell.swift */; };
 		7BDE08F27E1BF74680FCB923CE5AFF6B /* CardSetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED5395609354C8B4951C4F626F5321C /* CardSetListViewModel.swift */; };
+		7E0085E24400A349862B9C2D495E775C /* CardListDetailView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 029EFDE751CCEA967E57F70F86D96D05 /* CardListDetailView@2x.png */; };
 		8330E410BF9CFDFE680A4E1EC3550DF5 /* CardSetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759DC127E7D056ED9D16C8397B28A3D9 /* CardSetService.swift */; };
 		87BB17AD281F02DF4A4360A5796E3458 /* CardSetSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = A065C867EFC16C1EA21EB355E8F8DAB7 /* CardSetSpec.swift */; };
 		87C59E1EF0C9FDBED613D4487553CA13 /* FBSnapshotTestCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F00E55EDE33EE690052377AFEB589359 /* FBSnapshotTestCase.framework */; };
+		89AABA39E0BA9DBCE61400915DB70811 /* UPCarouselFlowLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D003C888175790A5C6C050ADA554B5AE /* UPCarouselFlowLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		89EBC14560A449811BB8519E1C2AD250 /* CardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABA287B0F25D402375C06EDEBA7729DD /* CardService.swift */; };
 		8BEBF5D92E028E07EC86179608B50AF6 /* CardListDetailViewModelImplSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76997DC5F3FECB0EF125F611CE709CA /* CardListDetailViewModelImplSpec.swift */; };
 		8D498559A7C7B9AE07F26F89C3977F71 /* MagicCardSetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F5F692EF2A52636A23A0BA35C1B9DD /* MagicCardSetProvider.swift */; };
 		8D5B03D18CE9C61671028997D8C510F4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11C8046447BABE46B5E1477E118C11B /* NetworkService.swift */; };
+		8E25FE25A433841C0B80AFBAB491F767 /* AddFavoriteCardUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD4BBB01471121C1B34F75B85C75435 /* AddFavoriteCardUseCaseImpl.swift */; };
 		90CA52EB1A814DDF389A508BE0E5CD3F /* Cards.json in Resources */ = {isa = PBXBuildFile; fileRef = 5671E9D39508D5FE5FE33CE147772332 /* Cards.json */; };
 		947C61248A67F581AE811C9D4BB0E18E /* CacheSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5574D8810CB4A3F14FB185C9EF2791CE /* CacheSpec.swift */; };
 		A88A688806AF4F1F47E1D7F159E554DA /* CardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53345D0C4BD688E24D28A3223980FB7E /* CardSet.swift */; };
@@ -58,6 +60,7 @@
 		AA52577853A58FF6043C5F9555F59E2C /* MagicCardSetProviderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F80877885ADAFC7197B1A0EFD0845CD /* MagicCardSetProviderImpl.swift */; };
 		AC2581A5EFAC75F86F1C685005D3E3BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C02D08FDA0F98A07595ECCB9625D13A /* Assets.xcassets */; };
 		B0F097D1C046DBAE1A703D5E766D9491 /* CardSetListView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD3C99C196835DDAB84FBE64CEC310 /* CardSetListView@2x.png */; };
+		B4933FCE1419B415AF3F5F7316D4E840 /* IsFavoriteCardUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF08643D4DF2D765BA134B40BC65D181 /* IsFavoriteCardUseCaseImpl.swift */; };
 		B5D485CF80473773B8E5097F26989C43 /* IsFavoriteCardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8362CA4214A1A7361474E4F2B4F0D8D /* IsFavoriteCardUseCase.swift */; };
 		B71ACADB6992CDA34B45F5B517461DD7 /* AddFavoriteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B9BDE46DFDA81C648488BD823D45C2 /* AddFavoriteUseCase.swift */; };
 		B7BF1E5D02186651CA9DAE492B3475D2 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EDC48085E92C66DE1F905C12CD05FD41 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -68,6 +71,8 @@
 		C12AB9FF77E0D373203C54B37CB66270 /* Sets.json in Resources */ = {isa = PBXBuildFile; fileRef = A9CC797423735D715F1AC0856DA9DE07 /* Sets.json */; };
 		CA741B238FE5C375CC605F92F249A5E8 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9AA413F01270431EB0B50CB84CABF58 /* OHHTTPStubs.framework */; };
 		CC26ACF137D59A64C8D62F4D036EF2F4 /* Quick.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 277990D0FA7A21130ABD56192D6A81BF /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD2443CA72F17AF0A50263B0763947EE /* CardListDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7021FD53BEDBCD3DBCE17E31DF2E63 /* CardListDetailCoordinator.swift */; };
+		CF974015FA15D38BF2F8945488DB424C /* CardSetListDetailViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0618C5E110487EE3199FEA92FA82B5 /* CardSetListDetailViewSpec.swift */; };
 		CFADCC64ED5E37CB6BBEC273DE8674BA /* CachedCardSetServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516F7DF69BC93633EB056AD7C7F5D817 /* CachedCardSetServiceSpec.swift */; };
 		D01A2AF93515FA25D7FE8052B7D56C35 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8F5FC6DAB1369DC1BB05DDF72AE48 /* Cache.swift */; };
 		D0BB0AA56E0835A0E40DCB8FD65E5BF6 /* MagicCardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F7900E72696D99C761B169227A5788 /* MagicCardSet.swift */; };
@@ -77,6 +82,7 @@
 		DCF5D64F8985FD7F7D1A046209680D79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FED5A7B6C2CF86827FFA4F2F70EC521 /* LaunchScreen.storyboard */; };
 		E21A691B203366072FC64C22CECE5FFF /* CardListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1350F7889207672EF606FF56E9214B4 /* CardListDetailViewController.swift */; };
 		E4B1B429FDDEB7CC86DD7F7C0D733728 /* CardDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6BE0A33280F2AE68CEBAF5FFB5929 /* CardDetailViewModel.swift */; };
+		E5E51428309E1AA58D8FE9B4E5503B43 /* UPCarouselFlowLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D003C888175790A5C6C050ADA554B5AE /* UPCarouselFlowLayout.framework */; };
 		E5EEF12EEF23ADED806918FAEB3C954A /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 669158D07267EDADD16AB6082704F236 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E86EE38F2E7E5D732086F37FBA743F48 /* OHHTTPStubs.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9AA413F01270431EB0B50CB84CABF58 /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EA4B14E23B0A1B202645CA23A245F32C /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 277990D0FA7A21130ABD56192D6A81BF /* Quick.framework */; };
@@ -116,6 +122,7 @@
 				3BB7CB8D2BA881A7EA2E9AD260815A62 /* RxSwift.framework in Embed Frameworks */,
 				D8F5636696989E61C2E6B272650F2C63 /* RxTest.framework in Embed Frameworks */,
 				DA7ED1ABD0BDBE3701EA7591649EC31D /* SnapKit.framework in Embed Frameworks */,
+				89AABA39E0BA9DBCE61400915DB70811 /* UPCarouselFlowLayout.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,10 +130,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		029EFDE751CCEA967E57F70F86D96D05 /* CardListDetailView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CardListDetailView@2x.png"; sourceTree = "<group>"; };
 		02F519F0B330DD3185C6FBBC0D45D7C8 /* Magic.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = Magic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0399F0C813E46E884CC92C5176D2E3CF /* CardGroupingStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGroupingStrategy.swift; sourceTree = "<group>"; };
 		03D5209760CE67FC92CF3B3793AF90C9 /* CardSetListViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSetListViewModelSpec.swift; sourceTree = "<group>"; };
 		0924F849AF13B26C78B47524CB544DA2 /* TextCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCellViewModel.swift; sourceTree = "<group>"; };
+		0A7021FD53BEDBCD3DBCE17E31DF2E63 /* CardListDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListDetailCoordinator.swift; sourceTree = "<group>"; };
 		0EB76AE9CEE8FCC2053A0B97E76878B9 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
 		0ED5395609354C8B4951C4F626F5321C /* CardSetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSetListViewModel.swift; sourceTree = "<group>"; };
 		19316034B3F732DA9CE805F400FF3CB3 /* Nimble_Snapshots.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble_Snapshots.framework; sourceTree = "<group>"; };
@@ -138,11 +147,11 @@
 		277990D0FA7A21130ABD56192D6A81BF /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Quick.framework; sourceTree = "<group>"; };
 		330D73D5E187875EED20FFC64F42BD8E /* CardCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CardCell@2x.png"; sourceTree = "<group>"; };
 		40B958FF277A36A4CD59B4BB578CB040 /* MagicTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MagicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		466351DF228A063900432D02 /* CardSetListDetailViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSetListDetailViewSpec.swift; sourceTree = "<group>"; };
+		4DD4BBB01471121C1B34F75B85C75435 /* AddFavoriteCardUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFavoriteCardUseCaseImpl.swift; sourceTree = "<group>"; };
 		516F7DF69BC93633EB056AD7C7F5D817 /* CachedCardSetServiceSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedCardSetServiceSpec.swift; sourceTree = "<group>"; };
 		53345D0C4BD688E24D28A3223980FB7E /* CardSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSet.swift; sourceTree = "<group>"; };
 		5574D8810CB4A3F14FB185C9EF2791CE /* CacheSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheSpec.swift; sourceTree = "<group>"; };
-		5671E9D39508D5FE5FE33CE147772332 /* Cards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Cards.json; sourceTree = "<group>"; };
+		5671E9D39508D5FE5FE33CE147772332 /* Cards.json */ = {isa = PBXFileReference; path = Cards.json; sourceTree = "<group>"; };
 		5C7C1D01C82E4D6CB2B318C7357204C8 /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		643B2E771BBB60AE3A53BE0C734A6931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		647BEA4AA0041F30D70AB2682BA826ED /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -168,7 +177,7 @@
 		A065C867EFC16C1EA21EB355E8F8DAB7 /* CardSetSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSetSpec.swift; sourceTree = "<group>"; };
 		A06DEE82E76CF8EB923E15CD03740948 /* TypeCardGrouperSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCardGrouperSpec.swift; sourceTree = "<group>"; };
 		A2EEC8EE51DBB557E35ABB1972F8A0B3 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxTest.framework; sourceTree = "<group>"; };
-		A9CC797423735D715F1AC0856DA9DE07 /* Sets.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Sets.json; sourceTree = "<group>"; };
+		A9CC797423735D715F1AC0856DA9DE07 /* Sets.json */ = {isa = PBXFileReference; path = Sets.json; sourceTree = "<group>"; };
 		ABA287B0F25D402375C06EDEBA7729DD /* CardService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardService.swift; sourceTree = "<group>"; };
 		B1A4808FC8D210F574BDA31EE378EF36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B62DD50C58B3C4D28CD5FA3181DC675D /* CardSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSpec.swift; sourceTree = "<group>"; };
@@ -177,14 +186,17 @@
 		B8362CA4214A1A7361474E4F2B4F0D8D /* IsFavoriteCardUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsFavoriteCardUseCase.swift; sourceTree = "<group>"; };
 		B94CC13583DBAA5CD3682DF96EB13904 /* CollectionViewSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewSectionViewModel.swift; sourceTree = "<group>"; };
 		BE68047BC8DF43C14948DBC5F5336708 /* TypeCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCellSpec.swift; sourceTree = "<group>"; };
+		BF08643D4DF2D765BA134B40BC65D181 /* IsFavoriteCardUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsFavoriteCardUseCaseImpl.swift; sourceTree = "<group>"; };
 		C4A53A071CBC95B8B9810E0FA670AB47 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		C4B9473E0A15A537955244E2C7AFC79E /* CardListDetailViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListDetailViewModelImpl.swift; sourceTree = "<group>"; };
 		C65166E591F0A5F2483C03B69C4E10F6 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxRelay.framework; sourceTree = "<group>"; };
 		C82CAB4533F5AA6B5C56E2144938E19C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C895A5202FA4CD334DF94650258D7260 /* CardSetListViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSetListViewSpec.swift; sourceTree = "<group>"; };
 		CFF4FC350E04F5E8961CAC71C41B7491 /* CachedCartSetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedCartSetService.swift; sourceTree = "<group>"; };
+		D003C888175790A5C6C050ADA554B5AE /* UPCarouselFlowLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UPCarouselFlowLayout.framework; sourceTree = "<group>"; };
 		D7EC8E9F3B55C8389311513288F0F728 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		DBF458308223EDCF558B7EBD6407C603 /* MagicCardSetProviderImplSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardSetProviderImplSpec.swift; sourceTree = "<group>"; };
+		DD0618C5E110487EE3199FEA92FA82B5 /* CardSetListDetailViewSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSetListDetailViewSpec.swift; sourceTree = "<group>"; };
 		EDC48085E92C66DE1F905C12CD05FD41 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
 		EF328707C424C9123BFAEAA994FE67F3 /* CardListDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListDetailView.swift; sourceTree = "<group>"; };
 		F00E55EDE33EE690052377AFEB589359 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSnapshotTestCase.framework; sourceTree = "<group>"; };
@@ -219,6 +231,7 @@
 				015012343F57B03E6DDA67C7B2FF9146 /* RxSwift.framework in Frameworks */,
 				08DBA27626869C260C5AD3DFFDA7E5FC /* RxRelay.framework in Frameworks */,
 				12789F5BD31BDCDD7AE84EFB437DBA27 /* RxCocoa.framework in Frameworks */,
+				E5E51428309E1AA58D8FE9B4E5503B43 /* UPCarouselFlowLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,14 +336,6 @@
 			path = Logic;
 			sourceTree = "<group>";
 		};
-		466351DE228A062D00432D02 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				466351DF228A063900432D02 /* CardSetListDetailViewSpec.swift */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
 		47D4CA0FAEC4144E5B48F376B87F2224 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,8 +378,17 @@
 				0EB76AE9CEE8FCC2053A0B97E76878B9 /* RxSwift.framework */,
 				A2EEC8EE51DBB557E35ABB1972F8A0B3 /* RxTest.framework */,
 				9B52CD78997CF0FC7F1EAB8BA1DD2C7D /* SnapKit.framework */,
+				D003C888175790A5C6C050ADA554B5AE /* UPCarouselFlowLayout.framework */,
 			);
 			path = iOS;
+			sourceTree = "<group>";
+		};
+		6B781B0BF2FE02E56F6E03F5A4D145BD /* CardSetListDetailViewSpec */ = {
+			isa = PBXGroup;
+			children = (
+				029EFDE751CCEA967E57F70F86D96D05 /* CardListDetailView@2x.png */,
+			);
+			path = CardSetListDetailViewSpec;
 			sourceTree = "<group>";
 		};
 		705A15C9622AEEA7A137B596F6EEE19E /* ViewModels */ = {
@@ -470,6 +484,7 @@
 			isa = PBXGroup;
 			children = (
 				774A016C090C0BEE4633384AC493075C /* CardCellSpec */,
+				6B781B0BF2FE02E56F6E03F5A4D145BD /* CardSetListDetailViewSpec */,
 				075B5226BE62D9BC937480EEE2543338 /* CardSetListViewSpec */,
 				8C4C192A70E365B90ECE2E54AAE6FECF /* TypeCellSpec */,
 			);
@@ -559,6 +574,14 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		C8F4A6ED065DAC15990E5AA90D1C39A7 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0A7021FD53BEDBCD3DBCE17E31DF2E63 /* CardListDetailCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		CC6F761729285023EAEB1F6F7F798026 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
@@ -576,6 +599,15 @@
 				F341805AADB15E007AB2A255DFBB9784 /* ViewModels */,
 			);
 			path = CardSetList;
+			sourceTree = "<group>";
+		};
+		D7E36DC98478CEDAB040ED74D6838A8A /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				4DD4BBB01471121C1B34F75B85C75435 /* AddFavoriteCardUseCaseImpl.swift */,
+				BF08643D4DF2D765BA134B40BC65D181 /* IsFavoriteCardUseCaseImpl.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		DAFC65C7392DB58C787E4260F1A61181 /* Data */ = {
@@ -609,7 +641,7 @@
 		E1F8736FDBE4D7D5D9FEB3FCB476AE15 /* CardListDetail */ = {
 			isa = PBXGroup;
 			children = (
-				466351DE228A062D00432D02 /* UI */,
+				F14758FB9C03B77D7F0D56DC4978397B /* UI */,
 				83605822339710753205418500F654F8 /* ViewModels */,
 			);
 			path = CardListDetail;
@@ -622,6 +654,14 @@
 				759DC127E7D056ED9D16C8397B28A3D9 /* CardSetService.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F14758FB9C03B77D7F0D56DC4978397B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DD0618C5E110487EE3199FEA92FA82B5 /* CardSetListDetailViewSpec.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		F2F292A8605BCB02D2CDCB580643F43C /* ViewModels */ = {
@@ -646,8 +686,10 @@
 		F3AA736B4540B8A74B7FBF8DE7636106 /* CardListDetail */ = {
 			isa = PBXGroup;
 			children = (
+				C8F4A6ED065DAC15990E5AA90D1C39A7 /* Coordinator */,
 				B43AA44AD509E825ED7E34EF92A941CE /* Protocols */,
 				8D5927B3C7CACAC97F7C28A526A7488A /* UI */,
+				D7E36DC98478CEDAB040ED74D6838A8A /* UseCases */,
 				A9C10CA47BE434A0302EB51C4FADB9A7 /* ViewControllers */,
 				DC0114BD1D1D1A2624C07A18416C46D1 /* ViewModels */,
 			);
@@ -721,7 +763,6 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = BBA3A022BB3D71DC3E6467AB6FDAF887;
@@ -740,6 +781,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1685FE4D2AB8B20215B2452BC0D0452 /* CardCell@2x.png in Resources */,
+				7E0085E24400A349862B9C2D495E775C /* CardListDetailView@2x.png in Resources */,
 				B0F097D1C046DBAE1A703D5E766D9491 /* CardSetListView@2x.png in Resources */,
 				90CA52EB1A814DDF389A508BE0E5CD3F /* Cards.json in Resources */,
 				C12AB9FF77E0D373203C54B37CB66270 /* Sets.json in Resources */,
@@ -789,6 +831,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/UPCarouselFlowLayout.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -797,6 +840,7 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/UPCarouselFlowLayout.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -809,6 +853,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E25FE25A433841C0B80AFBAB491F767 /* AddFavoriteCardUseCaseImpl.swift in Sources */,
 				B71ACADB6992CDA34B45F5B517461DD7 /* AddFavoriteUseCase.swift in Sources */,
 				BD90D09DFD411918A117AB707805CCE7 /* AppDelegate.swift in Sources */,
 				D01A2AF93515FA25D7FE8052B7D56C35 /* Cache.swift in Sources */,
@@ -817,6 +862,7 @@
 				5642160941FD94DCAD4E965AE9C0C3EE /* CardCell.swift in Sources */,
 				E4B1B429FDDEB7CC86DD7F7C0D733728 /* CardDetailViewModel.swift in Sources */,
 				1E0E692CD2830CB0444FAF045CBE58E0 /* CardGroupingStrategy.swift in Sources */,
+				CD2443CA72F17AF0A50263B0763947EE /* CardListDetailCoordinator.swift in Sources */,
 				659D5B0E332EAEEFDE8E043CFBCE4533 /* CardListDetailView.swift in Sources */,
 				E21A691B203366072FC64C22CECE5FFF /* CardListDetailViewController.swift in Sources */,
 				5CE238F30D061F007AB5559DA8A8BF5D /* CardListDetailViewModel.swift in Sources */,
@@ -832,6 +878,7 @@
 				1C34EEA4CB511A7A4AAFDA51E2574929 /* CollectionViewSectionViewModel.swift in Sources */,
 				28A618F6774A96AB5E486F06D7FFB037 /* Date+Extensions.swift in Sources */,
 				B5D485CF80473773B8E5097F26989C43 /* IsFavoriteCardUseCase.swift in Sources */,
+				B4933FCE1419B415AF3F5F7316D4E840 /* IsFavoriteCardUseCaseImpl.swift in Sources */,
 				339067F387A0D58C894167194B5E9150 /* MagicCard.swift in Sources */,
 				D0BB0AA56E0835A0E40DCB8FD65E5BF6 /* MagicCardSet.swift in Sources */,
 				8D498559A7C7B9AE07F26F89C3977F71 /* MagicCardSetProvider.swift in Sources */,
@@ -848,11 +895,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				466351E0228A063900432D02 /* CardSetListDetailViewSpec.swift in Sources */,
 				947C61248A67F581AE811C9D4BB0E18E /* CacheSpec.swift in Sources */,
 				CFADCC64ED5E37CB6BBEC273DE8674BA /* CachedCardSetServiceSpec.swift in Sources */,
 				BD379655D55CE66E47AC6189EDA818C2 /* CardCellSpec.swift in Sources */,
 				8BEBF5D92E028E07EC86179608B50AF6 /* CardListDetailViewModelImplSpec.swift in Sources */,
+				CF974015FA15D38BF2F8945488DB424C /* CardSetListDetailViewSpec.swift in Sources */,
 				F91CDD300FBC62B6757EA3D1867A4D6A /* CardSetListViewModelSpec.swift in Sources */,
 				08B97983D128FE1C3B3F3993FF0C5545 /* CardSetListViewSpec.swift in Sources */,
 				87BB17AD281F02DF4A4360A5796E3458 /* CardSetSpec.swift in Sources */,
@@ -955,11 +1002,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = MagicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jordao.filipe.magic.MagicTests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -977,11 +1020,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = MagicTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jordao.filipe.magic.MagicTests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1001,10 +1040,7 @@
 				);
 				INFOPLIST_FILE = Magic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jordao.filipe.magic.Magic;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1022,10 +1058,7 @@
 				);
 				INFOPLIST_FILE = Magic/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jordao.filipe.magic.Magic;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -17,7 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         window = UIWindow()
-        window?.rootViewController = CardListDetailViewController(viewModel: nil)
+        window?.rootViewController = CardListDetailCoordinator().create(cards: [
+            MagicCard(name: "", type: "", types: [], cardSet: "", imageURL: nil, identifier: ""),
+            MagicCard(name: "", type: "", types: [], cardSet: "", imageURL: nil, identifier: ""),
+            MagicCard(name: "", type: "", types: [], cardSet: "", imageURL: nil, identifier: ""),
+            MagicCard(name: "", type: "", types: [], cardSet: "", imageURL: nil, identifier: "")])
         window?.makeKeyAndVisible()
         
         return true
