@@ -63,13 +63,13 @@ class CardListDetailViewModelImplSpec: QuickSpec {
                     it("Should change the state to loaded") {
                         let state = try? sut.state.toBlocking().first()
 
-                        expect(state).to(equal(.loaded([CardViewModel(imageURL: nil)])))
+                        expect(state).to(equal(.loaded([CardDetailViewModel(imageURL: nil)])))
                     }
                 }
 
                 context("And a favorite event occurs") {
                     beforeEach {
-                        sut.bindSave(.just(0))
+                        sut.bindFavoriteToggle(.just(0))
                     }
 
                     it("Should save the favorited card") {

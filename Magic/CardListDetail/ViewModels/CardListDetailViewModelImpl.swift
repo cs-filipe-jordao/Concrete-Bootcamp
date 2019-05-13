@@ -33,15 +33,14 @@ extension CardListDetailViewModelImpl: CardListDetailViewModel {
             .asObservable()
             .withLatestFrom(Observable.just(cards))
             .flatMap(isFavoriteUseCase.favorites)
-            .map { $0.map {$0.card }}
-            .map { $0.map { CardViewModel(imageURL: $0.imageURL)} }
+            .map { $0.map { CardDetailViewModel(imageURL: $0.card.imageURL, isFavorite: $0.isfavorite)} }
             .map {CardListDetailState.loaded($0) }
             .asDriver(onErrorDriveWith: .empty())
             .drive(privateState)
             .disposed(by: disposeBag)
     }
 
-    func bindSave(_ observable: Driver<Int>) {
+    func bindFavoriteToggle(_ observable: Driver<Int>) {
         observable
             .withLatestFrom(Driver.just(cards), resultSelector: { $1[$0] })
             .drive(onNext: addFavoriteUseCase.toggleFavorite)

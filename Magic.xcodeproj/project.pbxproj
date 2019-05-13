@@ -34,6 +34,7 @@
 		463766272289E75600CFBCBB /* IsFavoriteCardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463766262289E75600CFBCBB /* IsFavoriteCardUseCase.swift */; };
 		463766292289E84600CFBCBB /* AddFavoriteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463766282289E84600CFBCBB /* AddFavoriteUseCase.swift */; };
 		4637662D2289EAF600CFBCBB /* CardListDetailViewModelImplSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4637662C2289EAF600CFBCBB /* CardListDetailViewModelImplSpec.swift */; };
+		4637662F2289F60C00CFBCBB /* CardDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4637662E2289F60C00CFBCBB /* CardDetailViewModel.swift */; };
 		466EC06B2283635E005DD101 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466EC06A2283635E005DD101 /* Date+Extensions.swift */; };
 		466EC06E228373B6005DD101 /* MagicCardSetProviderImplSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466EC06D228373B6005DD101 /* MagicCardSetProviderImplSpec.swift */; };
 		46A936DC228447A9004ABFCA /* CardSetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A936DB228447A9004ABFCA /* CardSetListViewModel.swift */; };
@@ -137,6 +138,7 @@
 		463766262289E75600CFBCBB /* IsFavoriteCardUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsFavoriteCardUseCase.swift; sourceTree = "<group>"; };
 		463766282289E84600CFBCBB /* AddFavoriteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFavoriteUseCase.swift; sourceTree = "<group>"; };
 		4637662C2289EAF600CFBCBB /* CardListDetailViewModelImplSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListDetailViewModelImplSpec.swift; sourceTree = "<group>"; };
+		4637662E2289F60C00CFBCBB /* CardDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewModel.swift; sourceTree = "<group>"; };
 		466EC06A2283635E005DD101 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		466EC06D228373B6005DD101 /* MagicCardSetProviderImplSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardSetProviderImplSpec.swift; sourceTree = "<group>"; };
 		46A936DB228447A9004ABFCA /* CardSetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSetListViewModel.swift; sourceTree = "<group>"; };
@@ -329,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				463766202289E2DE00CFBCBB /* CardListDetailViewModelImpl.swift */,
+				4637662E2289F60C00CFBCBB /* CardDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -804,6 +807,7 @@
 				8D498559A7C7B9AE07F26F89C3977F71 /* MagicCardSetProvider.swift in Sources */,
 				466EC06B2283635E005DD101 /* Date+Extensions.swift in Sources */,
 				463766242289E2F500CFBCBB /* CardListDetailViewModel.swift in Sources */,
+				4637662F2289F60C00CFBCBB /* CardDetailViewModel.swift in Sources */,
 				AA52577853A58FF6043C5F9555F59E2C /* MagicCardSetProviderImpl.swift in Sources */,
 				8D5B03D18CE9C61671028997D8C510F4 /* NetworkService.swift in Sources */,
 				104200B2D1C2DB1F41FC7C4F0B20FE54 /* TextCellViewModel.swift in Sources */,

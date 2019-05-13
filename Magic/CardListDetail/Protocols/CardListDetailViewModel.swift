@@ -11,7 +11,7 @@ import RxCocoa
 
 enum CardListDetailState: Equatable {
     case initial
-    case loaded([CardViewModel])
+    case loaded([CardDetailViewModel])
 }
 
 protocol CardListDetailViewModel {
