@@ -16,7 +16,7 @@ class CardSetListCoordinator {
                                                     cardSetService: cachedSetService)
         let typeGroupingStrategy = TypeCardGroupingStrategy()
 
-        let viewModel = CardSetListViewModel(dataSource: dataProvider,
+        let viewModel = CardSetListViewModelImpl(dataSource: dataProvider,
                                              groupingStrategy: typeGroupingStrategy)
         let viewController = CardSetListViewController(viewModel: viewModel)
 

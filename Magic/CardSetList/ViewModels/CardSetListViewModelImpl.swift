@@ -9,16 +9,8 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class CardSetListViewModel {
+class CardSetListViewModelImpl: CardSetListViewModel {
     public let state: Driver<State>
-
-    enum State: Equatable {
-        case initial
-        case loading
-        case loadingPage
-        case loaded([CollectionViewSectionViewModel])
-        case error(String)
-    }
 
     private let privateState = BehaviorRelay(value: State.initial)
     private let nextPage = BehaviorRelay(value: 0)

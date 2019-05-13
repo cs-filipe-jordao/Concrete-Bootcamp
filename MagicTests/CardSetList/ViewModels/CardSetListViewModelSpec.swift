@@ -31,12 +31,12 @@ class MagicCardSetListViewModelSpec: QuickSpec {
         describe("A CardSetListViewModel") {
             var provider: MockCardSetProvider!
             var groupingStrategy: MockGroupingStrategy!
-            var sut: CardSetListViewModel!
+            var sut: CardSetListViewModelImpl!
 
             beforeEach {
                 provider = MockCardSetProvider()
                 groupingStrategy = MockGroupingStrategy()
-                sut = CardSetListViewModel(dataSource: provider,
+                sut = CardSetListViewModelImpl(dataSource: provider,
                                            groupingStrategy: groupingStrategy)
             }
 
@@ -50,7 +50,7 @@ class MagicCardSetListViewModelSpec: QuickSpec {
             context("When a didLoad event occurs") {
                 context("And the fetch succeeds") {
                     var disposable: Disposable!
-                    var states = [CardSetListViewModel.State]()
+                    var states = [State]()
                     let set = MagicCardSet(code: "15A",
                                            name: "A random Cardset",
                                            releaseDate: nil,
@@ -78,7 +78,7 @@ class MagicCardSetListViewModelSpec: QuickSpec {
 
                 context("And the fetch fails") {
                     var disposable: Disposable!
-                    var states = [CardSetListViewModel.State]()
+                    var states = [State]()
                     beforeEach {
                         provider.cardSet = .error(NSError(domain: "", code: 0, userInfo: nil))
 

@@ -37,3 +37,4 @@ targets:
       - carthage: FBSnapshotTestCase
       - carthage: RxTest
       - carthage: RxBlocking
+      - carthage: KIF

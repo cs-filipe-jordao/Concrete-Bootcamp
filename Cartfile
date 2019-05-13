@@ -3,3 +3,4 @@ github "SnapKit/SnapKit" ~> 4.0
 github "ReactiveX/RxSwift" ~> 5.0
 github "RxSwiftCommunity/RxDataSources"
 github "kean/Nuke" ~> 7.0
+github "kif-framework/KIF"
