@@ -65,7 +65,6 @@ class CardSetListViewController: UIViewController {
 
     func setupLoading() {
         viewModel.state
-            .debug("Current State")
             .drive(onNext: { [weak self] state in
                 guard let self = self else { return }
                 self.cardSetView.activityIndicator.isHidden = state != .loading && state != .loadingPage
