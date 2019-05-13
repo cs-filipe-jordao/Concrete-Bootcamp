@@ -34,7 +34,7 @@ extension CardListDetailViewModelImpl: CardListDetailViewModel {
             .withLatestFrom(Observable.just(cards))
             .flatMap(isFavoriteUseCase.favorites)
             .map { $0.map { CardDetailViewModel(imageURL: $0.card.imageURL, isFavorite: $0.isfavorite)} }
-            .map {CardListDetailState.loaded($0) }
+            .map { CardListDetailState.loaded($0) }
             .asDriver(onErrorDriveWith: .empty())
             .drive(privateState)
             .disposed(by: disposeBag)
