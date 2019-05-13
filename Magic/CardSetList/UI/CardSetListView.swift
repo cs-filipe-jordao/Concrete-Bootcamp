@@ -10,14 +10,15 @@ import UIKit
 
 final class CardSetListView: UIView {
     let background = UIImageView()
+    let activityIndicator = UIActivityIndicatorView(style: .white)
 
     let collection: UICollectionView = {
-        let flowLayout = UICollectionViewFlowLayout()
+        let flowLayout = LeftAlignedCollectionViewFlowLayout()
         flowLayout.scrollDirection = .vertical
         flowLayout.minimumLineSpacing = 15
 
         let collection = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
-
+        collection.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: -10)
         collection.backgroundView = nil
         collection.backgroundColor = .clear
 
@@ -37,11 +38,13 @@ final class CardSetListView: UIView {
 extension CardSetListView: CodeView {
     func setupViews() {
         background.image = #imageLiteral(resourceName: "Background")
+        activityIndicator.startAnimating()
     }
 
     func setupHierarchy() {
         [ background,
-          collection ].forEach(self.addSubview)
+          collection,
+          activityIndicator ].forEach(self.addSubview)
     }
 
     func setupConstraints() {
@@ -59,6 +62,11 @@ extension CardSetListView: CodeView {
                 .left
                 .right
                 .equalTo(self)
+        }
+
+        activityIndicator.snp.makeConstraints { make in
+            make.center.equalTo(self)
+            make.size.equalTo(self)
         }
     }
 }

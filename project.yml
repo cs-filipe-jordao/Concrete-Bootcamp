@@ -20,6 +20,9 @@ targets:
       - carthage: RxSwift
       - carthage: RxRelay
       - carthage: RxCocoa
+      - carthage: RxDataSources
+      - carthage: Differentiator
+      - carthage: Nuke
 
   MagicTests:
     type: bundle.unit-test
@@ -34,3 +37,4 @@ targets:
       - carthage: FBSnapshotTestCase
       - carthage: RxTest
       - carthage: RxBlocking
+      - carthage: KIF

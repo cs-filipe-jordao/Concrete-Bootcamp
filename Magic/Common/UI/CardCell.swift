@@ -5,25 +5,49 @@
 //  Created by filipe.n.jordao on 07/05/19.
 //
 
+import Nuke
 import UIKit
 import SnapKit
 
 final class CardCell: UICollectionViewCell {
     let banner = UIImageView()
+    private var imageTask: Nuke.ImageTask?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureView()
     }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageTask?.cancel()
+    }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    func loadImage(url: URL?) {
+        guard let url = url else {
+            banner.image = #imageLiteral(resourceName: "cardback")
+            return
+        }
+
+        imageTask = Nuke.loadImage(
+            with: url,
+            options: ImageLoadingOptions(
+                placeholder: #imageLiteral(resourceName: "cardback"),
+                transition: .fadeIn(duration: 0.33)
+            ),
+            into: banner)
     }
 }
 
 extension CardCell: CodeView {
     func setupViews() {
         banner.contentMode = .scaleAspectFill
+        banner.clipsToBounds = true
+        contentView.layer.cornerRadius = 5
+        contentView.clipsToBounds = true
     }
 
     func setupHierarchy() {

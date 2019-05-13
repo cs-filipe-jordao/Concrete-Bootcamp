@@ -1,5 +1,5 @@
 //
-//  TypeCell.swift
+//  TextCell.swift
 //  Magic
 //
 //  Created by filipe.n.jordao on 07/05/19.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-final class TypeCell: UICollectionViewCell {
+final class TextCell: UICollectionViewCell {
     let typeLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
         label.textColor = #colorLiteral(red: 0.8318908215, green: 0.8277270198, blue: 0.8056753278, alpha: 1)
-        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.font = UIFont.boldSystemFont(ofSize: 18)
 
         return label
     }()
@@ -27,7 +27,7 @@ final class TypeCell: UICollectionViewCell {
     }
 }
 
-extension TypeCell: CodeView {
+extension TextCell: CodeView {
     func setupHierarchy() {
         contentView.addSubview(typeLabel)
     }
