@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-enum CardListDetailState {
+enum CardListDetailState: Equatable {
     case initial
     case loaded([CardViewModel])
 }

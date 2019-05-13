@@ -31,6 +31,9 @@
 		431376FC685738CCC1DEA3CCAF36166A /* CardSetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891F97D100308A002808C816D39E445B /* CardSetListView.swift */; };
 		463766212289E2DE00CFBCBB /* CardListDetailViewModelImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463766202289E2DE00CFBCBB /* CardListDetailViewModelImpl.swift */; };
 		463766242289E2F500CFBCBB /* CardListDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463766232289E2F500CFBCBB /* CardListDetailViewModel.swift */; };
+		463766272289E75600CFBCBB /* IsFavoriteCardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463766262289E75600CFBCBB /* IsFavoriteCardUseCase.swift */; };
+		463766292289E84600CFBCBB /* AddFavoriteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463766282289E84600CFBCBB /* AddFavoriteUseCase.swift */; };
+		4637662D2289EAF600CFBCBB /* CardListDetailViewModelImplSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4637662C2289EAF600CFBCBB /* CardListDetailViewModelImplSpec.swift */; };
 		466EC06B2283635E005DD101 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466EC06A2283635E005DD101 /* Date+Extensions.swift */; };
 		466EC06E228373B6005DD101 /* MagicCardSetProviderImplSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466EC06D228373B6005DD101 /* MagicCardSetProviderImplSpec.swift */; };
 		46A936DC228447A9004ABFCA /* CardSetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A936DB228447A9004ABFCA /* CardSetListViewModel.swift */; };
@@ -131,6 +134,9 @@
 		40B958FF277A36A4CD59B4BB578CB040 /* MagicTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MagicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		463766202289E2DE00CFBCBB /* CardListDetailViewModelImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListDetailViewModelImpl.swift; sourceTree = "<group>"; };
 		463766232289E2F500CFBCBB /* CardListDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListDetailViewModel.swift; sourceTree = "<group>"; };
+		463766262289E75600CFBCBB /* IsFavoriteCardUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsFavoriteCardUseCase.swift; sourceTree = "<group>"; };
+		463766282289E84600CFBCBB /* AddFavoriteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFavoriteUseCase.swift; sourceTree = "<group>"; };
+		4637662C2289EAF600CFBCBB /* CardListDetailViewModelImplSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListDetailViewModelImplSpec.swift; sourceTree = "<group>"; };
 		466EC06A2283635E005DD101 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		466EC06D228373B6005DD101 /* MagicCardSetProviderImplSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCardSetProviderImplSpec.swift; sourceTree = "<group>"; };
 		46A936DB228447A9004ABFCA /* CardSetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSetListViewModel.swift; sourceTree = "<group>"; };
@@ -312,6 +318,7 @@
 		4637661E2289E26500CFBCBB /* CardListDetail */ = {
 			isa = PBXGroup;
 			children = (
+				463766252289E73A00CFBCBB /* UseCases */,
 				463766222289E2E100CFBCBB /* Protocols */,
 				4637661F2289E2CA00CFBCBB /* ViewModels */,
 			);
@@ -330,8 +337,33 @@
 			isa = PBXGroup;
 			children = (
 				463766232289E2F500CFBCBB /* CardListDetailViewModel.swift */,
+				463766262289E75600CFBCBB /* IsFavoriteCardUseCase.swift */,
+				463766282289E84600CFBCBB /* AddFavoriteUseCase.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		463766252289E73A00CFBCBB /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		4637662A2289EAE000CFBCBB /* CardListDetail */ = {
+			isa = PBXGroup;
+			children = (
+				4637662B2289EAE800CFBCBB /* ViewModels */,
+			);
+			path = CardListDetail;
+			sourceTree = "<group>";
+		};
+		4637662B2289EAE800CFBCBB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4637662C2289EAF600CFBCBB /* CardListDetailViewModelImplSpec.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		466EC06C228373A7005DD101 /* Logic */ = {
@@ -441,6 +473,7 @@
 		844C7DF45E3D3E1B36EC126306D9FAAD /* MagicTests */ = {
 			isa = PBXGroup;
 			children = (
+				4637662A2289EAE000CFBCBB /* CardListDetail */,
 				891EABD397E79AD48E213F258177E2D4 /* Info.plist */,
 				95EFFA5B8C0455FCE4FD1CC9C90B6773 /* TimeTravelling.swift */,
 				BFF6F56F10D5E71B63CDEB6387FFDFD0 /* CardSetList */,
@@ -753,6 +786,7 @@
 				4954B77A3C914C342FF2B8CCEF27BC09 /* CachedCartSetService.swift in Sources */,
 				46A936DC228447A9004ABFCA /* CardSetListViewModel.swift in Sources */,
 				5341C36CD181B8F576CDC7F93AF550C6 /* Card.swift in Sources */,
+				463766272289E75600CFBCBB /* IsFavoriteCardUseCase.swift in Sources */,
 				5642160941FD94DCAD4E965AE9C0C3EE /* CardCell.swift in Sources */,
 				1E0E692CD2830CB0444FAF045CBE58E0 /* CardGroupingStrategy.swift in Sources */,
 				89EBC14560A449811BB8519E1C2AD250 /* CardService.swift in Sources */,
@@ -761,6 +795,7 @@
 				431376FC685738CCC1DEA3CCAF36166A /* CardSetListView.swift in Sources */,
 				8330E410BF9CFDFE680A4E1EC3550DF5 /* CardSetService.swift in Sources */,
 				4FD83ED252ECA3957D54C2AB07320520 /* CardViewModel.swift in Sources */,
+				463766292289E84600CFBCBB /* AddFavoriteUseCase.swift in Sources */,
 				220AE08BB7018DB829F8DB94C4FC0A27 /* CellViewModel.swift in Sources */,
 				2BDBA8F7BB3D89E63C514FDE134DA797 /* CodeView.swift in Sources */,
 				1C34EEA4CB511A7A4AAFDA51E2574929 /* CollectionViewSectionViewModel.swift in Sources */,
@@ -786,6 +821,7 @@
 				CFADCC64ED5E37CB6BBEC273DE8674BA /* CachedCardSetServiceSpec.swift in Sources */,
 				46A936DF22845B51004ABFCA /* CardSetListViewModelSpec.swift in Sources */,
 				BD379655D55CE66E47AC6189EDA818C2 /* CardCellSpec.swift in Sources */,
+				4637662D2289EAF600CFBCBB /* CardListDetailViewModelImplSpec.swift in Sources */,
 				08B97983D128FE1C3B3F3993FF0C5545 /* CardSetListViewSpec.swift in Sources */,
 				87BB17AD281F02DF4A4360A5796E3458 /* CardSetSpec.swift in Sources */,
 				F7031877A5937A061175FB02ED5A8659 /* CardSpec.swift in Sources */,
